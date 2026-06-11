@@ -17,8 +17,8 @@
       label: 'Central Texas Regional',
       awards: [
         { rank: '3rd', name: 'Inspire Award',           team: 'ChaiGPT' },
+        { rank: 'Finalist', name: 'FIRST Leadership Award', team: 'Rithwik Nair' },
         { rank: 'Semi-Finalist', name: 'FIRST Leadership Award', team: 'Aanya Pathak, Nishka Gupta' },
-        { rank: '',    name: 'FIRST Leadership Award',  team: 'Rithwik Nair', isTrophyEmpty: true },
         { rank: '2nd', name: 'Innovate Award',          team: 'Shooting Stars' },
         { rank: '2nd', name: 'Think Award',             team: 'Slingshot' },
         { rank: '—',   name: 'Division Finalist Alliance', team: 'Slingshot' },
