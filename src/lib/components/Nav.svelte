@@ -12,7 +12,6 @@
     { href: '/',         label: 'Home' },
     { href: '/about',    label: 'About' },
     { href: '/team',     label: 'Team' },
-    { href: '/mentors',  label: 'Mentors' },
     { href: '/robot',    label: 'Robot' },
     { href: '/outreach', label: 'Outreach' },
     { href: '/sponsors', label: 'Sponsors' },
@@ -59,7 +58,7 @@
         <img src="/logo-icon.png" alt="Luminary Robotics mark" class="nav__logo-img" />
       </div>
       <div class="nav__logo-text">
-        <span class="nav__logo-name">Luminary</span>
+        <span class="nav__logo-name">LUMINARY</span>
         <span class="nav__logo-num">FTC 35300</span>
       </div>
     </a>

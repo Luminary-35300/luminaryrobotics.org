@@ -30,6 +30,14 @@
         { name: 'Reett Aulakh', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/reett.jpg' },
       ]
     },
+    {
+      label: 'Leadership & Guidance',
+      title: 'Mentors & Professionals',
+      members: [
+        { name: 'Himanshu Save', role: 'Head Coach', grade: '', bio: 'Senior Research Scientist at UT Austin Center for Space Research', img: '' },
+        { name: 'Balakrishnan Sundararaman', role: 'Assistant Coach', grade: '', bio: 'Hardware Design Engineer at Samsung', img: '' },
+      ]
+    },
   ];
 </script>
 

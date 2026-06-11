@@ -3,7 +3,6 @@
     { label: 'Home',     href: '/' },
     { label: 'About',    href: '/about' },
     { label: 'Team',     href: '/team' },
-    { label: 'Mentors',  href: '/mentors' },
     { label: 'Robot',    href: '/robot' },
     { label: 'Outreach', href: '/outreach' },
     { label: 'Sponsors', href: '/sponsors' },

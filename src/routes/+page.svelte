@@ -17,11 +17,16 @@
       label: 'Central Texas Regional',
       awards: [
         { rank: '3rd', name: 'Inspire Award',           team: 'ChaiGPT' },
-        { rank: 'Finalist', name: 'FIRST Leadership Award', team: 'Rithwik Nair' },
-        { rank: 'Semi-Finalist', name: 'FIRST Leadership Award', team: 'Aanya Pathak, Nishka Gupta' },
         { rank: '2nd', name: 'Innovate Award',          team: 'Shooting Stars' },
         { rank: '2nd', name: 'Think Award',             team: 'Slingshot' },
         { rank: '—',   name: 'Division Finalist Alliance', team: 'Slingshot' },
+      ]
+    },
+    {
+      label: 'FIRST Leadership Award',
+      awards: [
+        { rank: 'Finalist', name: 'Rithwik Nair', team: '' },
+        { rank: 'Semi-Finalist', name: 'Aanya Pathak, Nishka Gupta', team: '' },
       ]
     },
     {
@@ -92,11 +97,14 @@
         <img src="/logo-icon.png" alt="Luminary Robotics mark" class="hero__logo" />
       </div>
       <div class="hero__label">FTC Team 35300</div>
-      <h1 class="hero__title">Luminary<br>Robotics</h1>
-      <p class="hero__mission">
-        FIRST IS MORE THAN ROBOTS — We build robots that compete at the highest level
-        while inspiring the next generation of engineers and scientists in our community.
-      </p>
+      <h1 class="hero__title">LUMINARY<br> </h1>
+      <br>
+      <div class="hero__mission">
+        <blockquote class="hero__quote">
+          <p>"FIRST is more than robots."</p>
+          <cite>— Founder of FIRST</cite>
+        </blockquote>
+      </div>
       <div class="hero__actions">
         <a href="/team" class="btn btn--primary" id="hero-cta-team">Meet The Team</a>
         <a href="/contact" class="btn btn--outline" id="hero-cta-contact">Contact Us</a>
@@ -123,6 +131,19 @@
     <div class="hero__scroll-line"></div>
   </div>
 </section>
+
+<!-- ── Definition ────────────────────────────────────────────── -->
+<section class="section section--sm definition-section">
+  <div class="container text-center reveal">
+    <blockquote class="definition-quote">
+      <p class="definition-word">lu·mi·nar·y</p>
+      <p class="definition-pos">/ˈlo͞oməˌnerē/ • noun</p>
+      <p class="definition-text">A person who <strong class="definition-highlight">inspires</strong> or influences others, especially one leading positive change in their community.</p>
+    </blockquote>
+  </div>
+</section>
+
+<div class="divider-accent container"><div class="divider--accent"></div></div>
 
 <!-- ── Achievements ──────────────────────────────────────────── -->
 <section class="section section--sm achievements">
@@ -156,7 +177,7 @@
                   <span class="award-row__rank" class:award-row__rank--dash={award.rank === '—' || award.rank === 'FIN'}>{award.rank}</span>
                 {/if}
                 <div class="award-row__info">
-                  <span class="award-row__name">{award.name}</span>
+                  <span class="award-row__name" class:award-row__name--shiny={award.name.includes('Inspire Award') || award.name.includes('Winning Alliance Captain')}>{award.name}</span>
                   <span class="award-row__team">{award.team}</span>
                 </div>
               </li>
@@ -297,12 +318,36 @@
   }
 
   .hero__mission {
-    font-size: var(--text-md);
-    color: var(--text-2);
-    line-height: 1.75;
     margin-bottom: var(--space-7);
     max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
   }
+
+  .hero__quote {
+    border-left: 3px solid var(--accent-blue);
+    padding-left: var(--space-4);
+    font-style: italic;
+  }
+
+  .hero__quote p {
+    font-size: var(--text-lg);
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+
+  .hero__quote cite {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--text-3);
+    margin-top: var(--space-2);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
 
   .hero__actions {
     display: flex;
@@ -362,6 +407,41 @@
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.3; }
     50%       { opacity: 1; }
+  }
+
+  /* ── Definition ───────────────────────────── */
+  .definition-section { padding-top: 0; }
+  .definition-quote {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .definition-word {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.05em;
+  }
+  .definition-pos {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-3);
+    font-style: italic;
+    margin-bottom: var(--space-4);
+  }
+  .definition-text {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--text-2);
+    line-height: 1.6;
+  }
+  .definition-highlight {
+    color: var(--accent-blue);
+    font-weight: 600;
   }
 
   /* ── Achievements ─────────────────────────── */
@@ -485,6 +565,41 @@
     font-weight: 600;
     color: var(--text);
     line-height: 1.2;
+  }
+
+  .award-row__name--shiny {
+    background: linear-gradient(
+      110deg,
+      #c59b27 0%,
+      #e0af2c 25%,
+      #f5d061 45%,
+      #e0af2c 65%,
+      #c59b27 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shinyGold 8s linear infinite;
+  }
+
+  :global([data-theme="light"]) .award-row__name--shiny {
+    background: linear-gradient(
+      110deg,
+      #8c6b10 0%,
+      #af8718 25%,
+      #d4af37 45%,
+      #af8718 65%,
+      #8c6b10 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes shinyGold {
+    to { background-position: 200% center; }
   }
 
   .award-row__team {

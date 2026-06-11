@@ -69,6 +69,7 @@
       <blockquote class="mission-statement">
         "FIRST IS MORE THAN ROBOTS"
       </blockquote>
+      <p class="mission-desc">We build robots that compete at the highest level while inspiring the next generation of engineers and scientists in our community.</p>
       <p class="mission-desc">We are an example of how competitors can evolve into collaborators, sharing knowledge and building a stronger community together.</p>
     </div>
   </section>
