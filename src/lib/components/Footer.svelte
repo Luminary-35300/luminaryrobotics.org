@@ -35,17 +35,17 @@
         </div>
         <p class="footer__tagline">FTC Team 35300 — Building the future,<br>one season at a time.</p>
         <div class="footer__socials">
-          <a href="#" class="footer__social" aria-label="Instagram">
+          <a href="https://instagram.com/luminaryrobotics" class="footer__social" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
             </svg>
           </a>
-          <a href="#" class="footer__social" aria-label="YouTube">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M22.5 6.5s-.2-1.5-.9-2.1c-.9-.9-1.8-.9-2.2-1C17 3.2 12 3.2 12 3.2s-5 0-7.4.2c-.5.1-1.4.1-2.2 1-.6.6-.9 2.1-.9 2.1S1.2 8.2 1.2 10v1.7c0 1.7.3 3.5.3 3.5s.2 1.5.9 2.1c.9.9 2 .8 2.5.9C6.5 18.4 12 18.4 12 18.4s5 0 7.4-.2c.5-.1 1.4-.1 2.2-1 .6-.6.9-2.1.9-2.1s.3-1.8.3-3.5v-1.7c-.1-1.8-.3-3.4-.3-3.4z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M9.7 14.5V9.2l6 2.7-6 2.6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <a href="https://youtube.com/@luminaryrobotics" class="footer__social" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
             </svg>
           </a>
         </div>
@@ -66,8 +66,8 @@
         <p class="footer__nav-title">Contact</p>
         <ul class="footer__contact-list" role="list">
           <li>
-            <a href="mailto:contact@luminaryrobotics.org" class="footer__nav-link">
-              contact@luminaryrobotics.org
+            <a href="mailto:luminaryrobotics@gmail.com" class="footer__nav-link">
+              luminaryrobotics@gmail.com
             </a>
           </li>
           <li class="footer__contact-label">FTC Team 35300</li>

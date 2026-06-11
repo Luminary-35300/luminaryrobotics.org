@@ -2,17 +2,46 @@
   import StatCounter from '$lib/components/StatCounter.svelte';
 
   const achievements = [
-    { label: '[Achievement 1]', desc: 'Placeholder for competition result or award' },
-    { label: '[Achievement 2]', desc: 'Placeholder for competition result or award' },
-    { label: '[Achievement 3]', desc: 'Placeholder for competition result or award' },
-    { label: '[Achievement 4]', desc: 'Placeholder for competition result or award' },
+    {
+      label: 'League Tournament',
+      awards: [
+        { rank: '1st', name: 'Winning Alliance Captain', team: 'Slingshot', isTrophy: true },
+        { rank: '1st', name: 'Inspire Award',          team: 'ChaiGPT', isTrophy: true },
+        { rank: '2nd', name: 'Inspire Award',          team: 'Slingshot' },
+        { rank: '3rd', name: 'Inspire Award',          team: 'Shooting Stars' },
+        { rank: '2nd', name: 'Control Award',          team: 'Hunga Munga' },
+        { rank: '—',   name: 'Finalist Alliance Captain', team: 'Hunga Munga' },
+      ]
+    },
+    {
+      label: 'Central Texas Regional',
+      awards: [
+        { rank: '3rd', name: 'Inspire Award',           team: 'ChaiGPT' },
+        { rank: '',    name: 'FIRST Leadership Award',  team: 'Rithwik Nair', isTrophyEmpty: true },
+        { rank: '2nd', name: 'Innovate Award',          team: 'Shooting Stars' },
+        { rank: '2nd', name: 'Think Award',             team: 'Slingshot' },
+        { rank: '—',   name: 'Division Finalist Alliance', team: 'Slingshot' },
+      ]
+    },
+    {
+      label: 'Texas State Cup',
+      awards: [
+        { rank: '2nd', name: 'Inspire Award', team: 'ChaiGPT' },
+      ]
+    },
+    {
+      label: 'FIRST World Championship',
+      awards: [
+        { rank: '3rd', name: 'Sustain Award', team: 'Slingshot' },
+      ]
+    },
   ];
 
   const stats = [
-    { value: 0,  suffix: '',  label: 'Competition Wins',   desc: 'Placeholder statistic' },
-    { value: 0,  suffix: '+', label: 'Outreach Hours',     desc: 'Placeholder statistic' },
-    { value: 0,  suffix: '',  label: 'Team Members',       desc: 'Placeholder statistic' },
-    { value: 0,  suffix: '',  label: 'Seasons Competed',   desc: 'Placeholder statistic' },
+    { value: 4,    suffix: '',  label: 'Competition Wins',   desc: 'Across all previous teams' },
+    { value: 1200, suffix: '+', label: 'Outreach Hours',     desc: 'Combined team legacy' },
+    { value: 9,    suffix: '',  label: 'Team Members',       desc: 'Luminary roster' },
+    { value: 3,    suffix: '',  label: 'Seasons Competed',   desc: 'Years of experience' },
   ];
 
   const sponsors = [
@@ -59,7 +88,7 @@
   <div class="hero__inner container">
     <div class="hero__content">
       <div class="hero__logo-wrap">
-        <img src="/logo.png" alt="Luminary Robotics Logo" class="hero__logo" />
+        <img src="/logo-icon.png" alt="Luminary Robotics mark" class="hero__logo" />
       </div>
       <div class="hero__label">FTC Team 35300</div>
       <h1 class="hero__title">Luminary<br>Robotics</h1>
@@ -97,22 +126,41 @@
 <!-- ── Achievements ──────────────────────────────────────────── -->
 <section class="section section--sm achievements">
   <div class="container">
-    <div class="achievements__header reveal">
+    <div class="achievements__header text-center reveal">
       <span class="section-header__label">Recognition</span>
-      <h2 class="section-header__title">Awards & Achievements</h2>
+      <h2 class="h2">Awards &amp; Legacy</h2>
+      <p class="text-lead mt-2">A foundation of excellence built across multiple seasons.</p>
+      <div class="achievements__note">
+        <strong>✦ Note on our legacy:</strong> Luminary Robotics is a rookie team formed from the merger of <em>Hunga Munga</em>, <em>Slingshot</em>, <em>ChaiGPT</em>, and <em>Shooting Stars</em>. The awards listed below were earned by those original teams and their many dedicated members prior to our merger. We are proud to carry their legacy forward.
+      </div>
     </div>
+
     <div class="achievements__grid">
       {#each achievements as ach, i}
         <div class="achievement-card reveal" style="transition-delay: {i * 80}ms">
-          <div class="achievement-card__icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L2.2 7.7l5.4-.8L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <div class="achievement-card__label">{ach.label}</div>
-            <div class="achievement-card__desc">{ach.desc}</div>
-          </div>
+          <div class="achievement-card__comp">{ach.label}</div>
+          <ul class="achievement-card__awards">
+            {#each ach.awards as award}
+              <li class="award-row">
+                {#if award.isTrophy || award.isTrophyEmpty}
+                  <div class="award-row__trophy-wrapper">
+                    <svg class="award-row__trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 21h8M12 17v4M7 4h10M5 4h14v5a6 6 0 0 1-6 6H11a6 6 0 0 1-6-6V4z"/>
+                    </svg>
+                    {#if !award.isTrophyEmpty}
+                      <span class="award-row__trophy-text">{award.rank}</span>
+                    {/if}
+                  </div>
+                {:else}
+                  <span class="award-row__rank" class:award-row__rank--dash={award.rank === '—' || award.rank === 'FIN'}>{award.rank}</span>
+                {/if}
+                <div class="award-row__info">
+                  <span class="award-row__name">{award.name}</span>
+                  <span class="award-row__team">{award.team}</span>
+                </div>
+              </li>
+            {/each}
+          </ul>
         </div>
       {/each}
     </div>
@@ -178,10 +226,10 @@
 <style>
   /* ── Hero ─────────────────────────────────── */
   .hero {
-    min-height: 85vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: calc(var(--nav-h) + var(--space-2));
+    padding-bottom: var(--space-10);
     position: relative;
     overflow: hidden;
   }
@@ -202,7 +250,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--space-10);
     align-items: center;
-    padding-top: var(--space-10);
+    padding-top: 0;
     padding-bottom: var(--space-10);
     position: relative;
     z-index: 1;
@@ -217,9 +265,17 @@
   }
 
   .hero__logo {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
+    /* Drop white bg on dark theme — invert to black bg then screen blends it away */
+    filter: invert(1) brightness(1.1);
+    mix-blend-mode: screen;
+  }
+
+  :global([data-theme="light"]) .hero__logo {
+    filter: none;
+    mix-blend-mode: multiply;
   }
 
   .hero__label {
@@ -310,44 +366,130 @@
   }
 
   /* ── Achievements ─────────────────────────── */
-  .achievements__header { margin-bottom: var(--space-6); }
+  .achievements__header { margin-bottom: var(--space-8); }
+
+  .achievements__note {
+    font-size: var(--text-sm);
+    color: var(--text-2);
+    max-width: 720px;
+    margin: var(--space-6) auto 0;
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface-2);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .achievements__note strong {
+    color: var(--text);
+  }
 
   .achievements__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
   }
 
   .achievement-card {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-4);
-    padding: var(--space-5);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    padding: var(--space-6) var(--space-7);
     transition: border-color var(--transition);
   }
 
   .achievement-card:hover { border-color: var(--border-2); }
 
-  .achievement-card__icon {
+  .achievement-card__comp {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--accent-gold);
-    flex-shrink: 0;
-    margin-top: 2px;
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border);
   }
 
-  .achievement-card__label {
+  .achievement-card__awards {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .award-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .award-row:last-child { border-bottom: none; }
+
+  .award-row__rank {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--text);
+    min-width: 56px;
+    flex-shrink: 0;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .award-row__rank--dash {
+    font-family: var(--font-body);
+    font-size: var(--text-xl);
+    color: var(--text-3);
+    font-weight: 400;
+  }
+
+  .award-row__trophy-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    color: var(--accent-gold);
+  }
+
+  .award-row__trophy-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .award-row__trophy-text {
+    font-family: var(--font-body);
     font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--text);
+    z-index: 1;
+    margin-top: -8px;
+  }
+
+  .award-row__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .award-row__name {
+    font-size: var(--text-lg);
     font-weight: 600;
     color: var(--text);
-    margin-bottom: var(--space-1);
+    line-height: 1.2;
   }
 
-  .achievement-card__desc {
-    font-size: var(--text-xs);
+  .award-row__team {
+    font-size: var(--text-sm);
     color: var(--text-3);
-    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   /* ── Stats ────────────────────────────────── */
@@ -466,7 +608,6 @@
   }
 
   @media (max-width: 1024px) {
-    .achievements__grid { grid-template-columns: repeat(2, 1fr); }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
@@ -479,5 +620,6 @@
   @media (max-width: 600px) {
     .achievements__grid { grid-template-columns: 1fr; }
     .hero__title { font-size: var(--text-3xl); }
+    .sponsors-preview__logos { grid-template-columns: repeat(2, 1fr); }
   }
 </style>

@@ -56,10 +56,10 @@
   --text-md: 1.125rem;
   --text-lg: 1.25rem;
   --text-xl: 1.5rem;
-  --text-2xl: 2rem;
-  --text-3xl: 2.5rem;
-  --text-4xl: 3.5rem;
-  --text-5xl: 4.5rem;
+  --text-2xl: 2.125rem;
+  --text-3xl: 2.625rem;
+  --text-4xl: 3.75rem;
+  --text-5xl: 4.75rem;
 
   /* Layout */
   --max-w: 1200px;
@@ -413,18 +413,15 @@ textarea.input {
 /* ── Scroll Reveal ─────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  filter: blur(6px);
-  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
-              transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
-              filter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: opacity, transform, filter;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
+  transform: translateY(0) scale(1);
 }
 
 /* ── Placeholder Boxes ─────────────────────────────────────── */
@@ -442,22 +439,6 @@ textarea.input {
   text-align: center;
 }
 
-/* Placeholder Logo Blend Fix */
-img[src="/logo.png"] {
-  filter: invert(1);
-  mix-blend-mode: screen;
-}
-[data-theme="light"] img[src="/logo.png"] {
-  filter: none;
-  mix-blend-mode: multiply;
-}
-
-/* Crop logo to just the icon */
-.logo-icon {
-  object-fit: cover;
-  object-position: 50% 30%;
-  border-radius: 50%;
-}
 
 /* ── Utility classes ───────────────────────────────────────── */
 .text-center { text-align: center; }

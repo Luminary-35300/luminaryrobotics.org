@@ -53,7 +53,7 @@
           </svg>
         </div>
         <div class="merger-final">
-          <img src="/logo.png" alt="Luminary Logo" class="merger-logo logo-icon" />
+          <img src="/logo-icon.png" alt="Luminary Logo" class="merger-logo logo-icon" />
           <div class="merger-final-name">Luminary</div>
         </div>
       </div>

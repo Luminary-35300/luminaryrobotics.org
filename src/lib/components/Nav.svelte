@@ -55,7 +55,7 @@
     <!-- Logo -->
     <a href="/" class="nav__logo" aria-label="Luminary Robotics Home">
       <div class="nav__logo-mark">
-        <img src="/logo.png" alt="" class="logo-icon" style="width: 32px; height: 32px;" />
+        <img src="/logo-icon.png" alt="Luminary Robotics mark" class="nav__logo-img" />
       </div>
       <div class="nav__logo-text">
         <span class="nav__logo-name">Luminary</span>
@@ -87,10 +87,13 @@
         aria-label="Open search (Cmd+K)"
         id="nav-search-btn"
       >
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+        <div class="nav__search-left">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Search</span>
+        </div>
         <span class="nav__search-hint">⌘K</span>
       </button>
 
@@ -158,6 +161,7 @@
     align-items: center;
     transition: background var(--transition-slow), border-color var(--transition-slow), backdrop-filter var(--transition-slow);
     border-bottom: 1px solid transparent;
+    --nav-btn-h: 36px;
   }
 
   .nav--scrolled {
@@ -191,9 +195,24 @@
   }
 
   .nav__logo-mark {
-    color: var(--text);
-    opacity: 0.9;
+    display: flex;
+    align-items: center;
     transition: opacity var(--transition);
+  }
+
+  .nav__logo-img {
+    /* Tall: match the full stacked text height (~38px with name+num+gap) */
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+    /* Blend white bg away on dark theme */
+    filter: invert(1) brightness(1.15);
+    mix-blend-mode: screen;
+  }
+
+  :global([data-theme="light"]) .nav__logo-img {
+    filter: none;
+    mix-blend-mode: multiply;
   }
 
   .nav__logo:hover .nav__logo-mark { opacity: 1; }
@@ -249,11 +268,15 @@
     flex-shrink: 0;
   }
 
+  /* Fixed height for search bar so theme btn can match */
+
   .nav__search-btn {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
-    padding: 6px 14px;
+    justify-content: space-between;
+    padding: 0 12px 0 16px;
+    height: var(--nav-btn-h);
+    min-width: 160px;
     font-size: var(--text-sm);
     font-family: var(--font-body);
     color: var(--text-3);
@@ -270,6 +293,12 @@
     border-color: var(--border-2);
   }
 
+  .nav__search-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
   .nav__search-hint {
     font-size: var(--text-xs);
     color: var(--text-3);
@@ -280,14 +309,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: var(--nav-btn-h);
+    height: var(--nav-btn-h);
     background: transparent;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     color: var(--text-2);
     cursor: pointer;
     transition: all var(--transition);
+    flex-shrink: 0;
   }
 
   .nav__theme-btn:hover {
