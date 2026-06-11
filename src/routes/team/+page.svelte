@@ -8,18 +8,18 @@
       title: 'Programming Team',
       members: [
         { name: 'Ishaan Desai', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/ishaan.jpg' },
-        { name: 'Antara Save', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/antara.jpg' },
-        { name: 'Nathan Li', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/nathan.jpg' },
+        { name: 'Antara Save', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '' },
+        { name: 'Nathan Li', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '' },
       ]
     },
     {
       label: 'Design & Hardware',
       title: 'Design/Hardware Team',
       members: [
-        { name: 'Rithwik Nair', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/rithwik.jpg' },
-        { name: 'Nishka Gupta', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/nishka.jpg' },
+        { name: 'Rithwik Nair', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
+        { name: 'Nishka Gupta', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
         { name: 'Niketh Balakrishnan', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/niketh.jpg' },
-        { name: 'Bao Blows', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/bao.jpg' },
+        { name: 'Bao Blows', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
       ]
     },
     {
