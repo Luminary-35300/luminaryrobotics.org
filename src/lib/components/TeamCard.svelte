@@ -39,7 +39,7 @@
   .team-card:hover { border-color: var(--border-2); }
 
   .team-card__photo {
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     background: var(--surface-2);
     border-bottom: 1px solid var(--border);
     color: var(--border-2);
