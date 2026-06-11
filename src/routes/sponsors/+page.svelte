@@ -150,7 +150,7 @@
       </div>
       <div class="sponsor-cta__actions">
         <a href="/contact" class="btn btn--primary" id="sponsor-cta-contact">Contact Us</a>
-        <a href="mailto:contact@luminaryrobotics.org" class="btn btn--outline">Send an Email</a>
+        <a href="mailto:luminaryrobotics@gmail.com" class="btn btn--outline">Send an Email</a>
       </div>
     </div>
   </div>
