@@ -54,7 +54,7 @@
         </div>
         <div class="merger-final">
           <img src="/logo-icon.png" alt="Luminary Logo" class="merger-logo logo-icon" />
-          <div class="merger-final-name">Luminary</div>
+          <div class="merger-final-name">LUMINARY</div>
         </div>
       </div>
     </div>
