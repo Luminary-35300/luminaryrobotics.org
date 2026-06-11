@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 function createThemeStore() {
-  const stored = browser ? localStorage.getItem('lr-theme') || 'dark' : 'dark';
+  const stored = browser ? localStorage.getItem('lr-theme') || 'light' : 'light';
   const { subscribe, set } = writable(stored);
 
   return {
@@ -18,7 +18,7 @@ function createThemeStore() {
     },
     init: () => {
       if (!browser) return;
-      const saved = localStorage.getItem('lr-theme') || 'dark';
+      const saved = localStorage.getItem('lr-theme') || 'light';
       document.documentElement.setAttribute('data-theme', saved);
       document.body.setAttribute('data-theme', saved);
       set(saved);

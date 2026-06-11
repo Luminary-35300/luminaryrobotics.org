@@ -3,6 +3,7 @@
     { label: 'Home',     href: '/' },
     { label: 'About',    href: '/about' },
     { label: 'Team',     href: '/team' },
+    { label: 'Mentors',  href: '/mentors' },
     { label: 'Robot',    href: '/robot' },
     { label: 'Outreach', href: '/outreach' },
     { label: 'Sponsors', href: '/sponsors' },
@@ -23,14 +24,7 @@
       <!-- Brand -->
       <div class="footer__brand">
         <div class="footer__logo">
-          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="14" cy="14" r="4" fill="currentColor" opacity="0.9"/>
-            <line x1="14" y1="1" x2="14" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="14" y1="22" x2="14" y2="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="1" y1="14" x2="6" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="22" y1="14" x2="27" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+          <img src="/logo-icon.png" alt="Luminary Robotics mark" class="footer__logo-img" />
           <span class="footer__logo-name">Luminary Robotics</span>
         </div>
         <p class="footer__tagline">FTC Team 35300 — Building the future,<br>one season at a time.</p>
@@ -45,7 +39,7 @@
           <a href="https://youtube.com/@luminaryrobotics" class="footer__social" aria-label="YouTube">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
             </svg>
           </a>
         </div>
@@ -118,6 +112,17 @@
     gap: var(--space-3);
     color: var(--text);
     margin-bottom: var(--space-4);
+  }
+
+  .footer__logo-img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    filter: invert(1) brightness(1.15);
+  }
+
+  :global([data-theme="light"]) .footer__logo-img {
+    filter: none;
   }
 
   .footer__logo-name {

@@ -6,12 +6,13 @@
 
   let scrolled = $state(false);
   let mobileOpen = $state(false);
-  let currentTheme = $state('dark');
+  let currentTheme = $state('light');
 
   const navLinks = [
     { href: '/',         label: 'Home' },
     { href: '/about',    label: 'About' },
     { href: '/team',     label: 'Team' },
+    { href: '/mentors',  label: 'Mentors' },
     { href: '/robot',    label: 'Robot' },
     { href: '/outreach', label: 'Outreach' },
     { href: '/sponsors', label: 'Sponsors' },
@@ -205,14 +206,12 @@
     height: 42px;
     width: 42px;
     object-fit: contain;
-    /* Blend white bg away on dark theme */
+    /* Invert for dark theme */
     filter: invert(1) brightness(1.15);
-    mix-blend-mode: screen;
   }
 
   :global([data-theme="light"]) .nav__logo-img {
     filter: none;
-    mix-blend-mode: multiply;
   }
 
   .nav__logo:hover .nav__logo-mark { opacity: 1; }

@@ -269,14 +269,12 @@
     width: 120px;
     height: 120px;
     object-fit: contain;
-    /* Drop white bg on dark theme — invert to black bg then screen blends it away */
+    /* Invert for dark theme */
     filter: invert(1) brightness(1.1);
-    mix-blend-mode: screen;
   }
 
   :global([data-theme="light"]) .hero__logo {
     filter: none;
-    mix-blend-mode: multiply;
   }
 
   .hero__label {
@@ -478,6 +476,8 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    min-width: 0;
+    flex: 1;
   }
 
   .award-row__name {
@@ -620,6 +620,11 @@
 
   @media (max-width: 600px) {
     .achievements__grid { grid-template-columns: 1fr; }
+    .achievement-card { padding: var(--space-5) var(--space-4); }
+    .award-row { gap: var(--space-3); }
+    .award-row__rank { min-width: 40px; font-size: var(--text-xl); }
+    .award-row__trophy-wrapper { width: 40px; height: 40px; }
+    .award-row__name { font-size: var(--text-base); }
     .hero__title { font-size: var(--text-3xl); }
     .sponsors-preview__logos { grid-template-columns: repeat(2, 1fr); }
   }
