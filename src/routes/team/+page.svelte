@@ -16,7 +16,7 @@
       label: 'Design & Hardware',
       title: 'Design/Hardware Team',
       members: [
-        { name: 'Rithwik Nair', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
+        { name: 'Rithwik Nair', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/rithwik.jpg' },
         { name: 'Nishka Gupta', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
         { name: 'Niketh Balakrishnan', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/niketh.jpg' },
         { name: 'Bao Blows', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '' },
