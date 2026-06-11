@@ -7,27 +7,27 @@
       label: 'Design & Hardware',
       title: 'Design/Hardware Team',
       members: [
-        { name: 'Rithwik Nair', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/rithwik.jpg' },
-        { name: 'Nishka Gupta', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/nishka.jpg' },
-        { name: 'Niketh Balakrishnan', role: 'Design/Hardware', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/niketh.jpg' },
-        { name: 'Bao Blows', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/bao.jpg' },
+        { name: 'Rithwik Nair', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/rithwik.jpg' },
+        { name: 'Nishka Gupta', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/nishka.jpg' },
+        { name: 'Niketh Balakrishnan', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/niketh.jpg' },
+        { name: 'Bao Blows', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/bao.jpg' },
       ]
     },
     {
       label: 'Software',
       title: 'Programming Team',
       members: [
-        { name: 'Ishaan Desai', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/ishaan.jpg' },
-        { name: 'Antara Save', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/antara.jpg' },
-        { name: 'Nathan Li', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/nathan.jpg' },
+        { name: 'Ishaan Desai', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/ishaan.jpg' },
+        { name: 'Antara Save', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/antara.jpg' },
+        { name: 'Nathan Li', role: '', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/nathan.jpg' },
       ]
     },
     {
       label: 'Business & Outreach',
       title: 'Outreach Team',
       members: [
-        { name: 'Aanya Pathak', role: 'Outreach', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/aanya.jpg' },
-        { name: 'Reett Aulakh', role: 'Outreach', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/reett.jpg' },
+        { name: 'Aanya Pathak', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/aanya.jpg' },
+        { name: 'Reett Aulakh', role: '', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/reett.jpg' },
       ]
     },
   ];
