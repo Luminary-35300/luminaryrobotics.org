@@ -4,39 +4,30 @@
 
   const sections = [
     {
-      label: 'Leadership',
-      title: 'Leadership Team',
+      label: 'Design & Hardware',
+      title: 'Design/Hardware Team',
       members: [
-        { name: '[Name]', role: 'Team Captain', grade: '12th Grade', bio: '[Short bio placeholder — leadership experience, interests, and goals.]' },
-        { name: '[Name]', role: 'Co-Captain',   grade: '11th Grade', bio: '[Short bio placeholder — leadership experience, interests, and goals.]' },
-      ]
-    },
-    {
-      label: 'Engineering',
-      title: 'Engineering Team',
-      members: [
-        { name: '[Name]', role: 'Lead Mechanical Engineer', grade: '12th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Mechanical Engineer',      grade: '11th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'CAD Specialist',           grade: '10th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Mechanical Engineer',      grade: '9th Grade',  bio: '[Short bio placeholder.]' },
+        { name: 'Rithwik Nair', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/rithwik.jpg' },
+        { name: 'Nishka Gupta', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/nishka.jpg' },
+        { name: 'Niketh Balakrishnan', role: 'Design/Hardware', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/niketh.jpg' },
+        { name: 'Bao Blows', role: 'Design/Hardware', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/bao.jpg' },
       ]
     },
     {
       label: 'Software',
-      title: 'Software Team',
+      title: 'Programming Team',
       members: [
-        { name: '[Name]', role: 'Lead Programmer',    grade: '12th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Autonomous Lead',    grade: '11th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Software Engineer',  grade: '10th Grade', bio: '[Short bio placeholder.]' },
+        { name: 'Ishaan Desai', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/ishaan.jpg' },
+        { name: 'Antara Save', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/antara.jpg' },
+        { name: 'Nathan Li', role: 'Programming', grade: '10th', bio: '[Short bio placeholder]', img: '/images/team/nathan.jpg' },
       ]
     },
     {
       label: 'Business & Outreach',
-      title: 'Business & Outreach Team',
+      title: 'Outreach Team',
       members: [
-        { name: '[Name]', role: 'Business Lead',        grade: '12th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Outreach Coordinator', grade: '11th Grade', bio: '[Short bio placeholder.]' },
-        { name: '[Name]', role: 'Media & Marketing',    grade: '10th Grade', bio: '[Short bio placeholder.]' },
+        { name: 'Aanya Pathak', role: 'Outreach', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/aanya.jpg' },
+        { name: 'Reett Aulakh', role: 'Outreach', grade: '11th', bio: '[Short bio placeholder]', img: '/images/team/reett.jpg' },
       ]
     },
   ];
@@ -68,6 +59,7 @@
               role={member.role}
               grade={member.grade}
               bio={member.bio}
+              img={member.img}
             />
           </div>
         {/each}

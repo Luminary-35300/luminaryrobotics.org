@@ -24,7 +24,7 @@
 <PageHero
   label="About Us"
   title="Who We Are"
-  subtitle="Luminary Robotics is FTC Team 35300 — a student-led engineering organization competing at the highest level while investing in our community."
+  subtitle="Luminary Robotics is FTC Team 35300 — a student-led robotics team competing at the highest level while investing in our community."
 />
 
 <div class="container">
@@ -131,12 +131,6 @@
     line-height: 1.75;
   }
 
-  .about-image {
-    aspect-ratio: 4/3;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
-  }
 
   .mission-wrap {
     text-align: center;

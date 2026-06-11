@@ -26,7 +26,7 @@
     {
       label: 'Texas State Cup',
       awards: [
-        { rank: '2nd', name: 'Inspire Award', team: 'ChaiGPT' },
+        { rank: '1st', name: 'Inspire Award', team: 'ChaiGPT', isTrophy: true },
       ]
     },
     {
