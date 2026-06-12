@@ -250,8 +250,9 @@
   .hero {
     display: flex;
     flex-direction: column;
-    padding-top: calc(var(--nav-h) + var(--space-2));
-    padding-bottom: var(--space-10);
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: var(--nav-h);
     position: relative;
     overflow: hidden;
   }
@@ -390,10 +391,10 @@
   }
 
   .hero__scroll-hint {
-    display: flex;
-    justify-content: center;
-    padding-bottom: var(--space-6);
-    position: relative;
+    position: absolute;
+    bottom: var(--space-6);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
   }
 
