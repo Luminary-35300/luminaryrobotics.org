@@ -3,15 +3,15 @@
   import TeamCard from '$lib/components/TeamCard.svelte';
 
   const students = [
-    { name: 'Ishaan Desai', role: 'Programming', group: 'software', img: '/images/team/ishaan.jpg', bio: 'Specialized in Autonomous' },
-    { name: 'Antara Save', role: 'Programming', group: 'software', img: '', bio: 'Specialized in utilizing sensors and TeleOp' },
-    { name: 'Nathan Li', role: 'Programming', group: 'software', img: '', bio: 'Specialized in Finite State Machines and autonomous' },
-    { name: 'Rithwik Nair', role: 'Design/Hardware', group: 'hardware', img: '/images/team/rithwik.jpg', bio: '[Short bio placeholder]' },
+    { name: 'Ishaan Desai', role: 'Programming', group: 'software', img: '/images/team/ishaan.jpg', bio: 'Specialized in Autonomous and Advanced Localization with Kalman Filters' },
+    { name: 'Antara Save', role: 'Programming', group: 'software', img: '/images/team/antara.jpg', bio: 'Specialized in utilizing sensors and TeleOp' },
+    { name: 'Nathan Li', role: 'Programming', group: 'software', img: '', bio: 'Specialized in Finite State Machines and Autonomous' },
+    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '', bio: '[Short bio placeholder]' },
     { name: 'Nishka Gupta', role: 'Design/Hardware', group: 'hardware', img: '', bio: '[Short bio placeholder]' },
     { name: 'Niketh Balakrishnan', role: 'Design/Hardware', group: 'hardware', img: '/images/team/niketh.jpg', bio: '[Short bio placeholder]' },
-    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '', bio: '[Short bio placeholder]' },
-    { name: 'Aanya Pathak', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/aanya.jpg', bio: '[Short bio placeholder]' },
+    { name: 'Rithwik Nair', role: 'Design/Hardware', group: 'hardware', img: '/images/team/rithwik.jpg', bio: '[Short bio placeholder]' },
     { name: 'Reett Aulakh', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/reett.jpg', bio: '[Short bio placeholder]' },
+    { name: 'Aanya Pathak', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/aanya.jpg', bio: '[Short bio placeholder]' },
   ];
 
   const mentors = [
