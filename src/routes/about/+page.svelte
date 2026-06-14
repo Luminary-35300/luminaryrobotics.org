@@ -209,6 +209,11 @@
     width: 64px;
     height: 64px;
     object-fit: contain;
+    filter: invert(1) brightness(1.1);
+  }
+
+  :global([data-theme="light"]) .merger-logo {
+    filter: none;
   }
 
   .merger-final-name {

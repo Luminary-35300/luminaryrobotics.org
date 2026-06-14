@@ -159,10 +159,16 @@
   }
 
   .center-logo {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     margin-bottom: var(--space-4);
-    opacity: 0.8;
+    opacity: 0.9;
+    filter: invert(1) brightness(1.1);
+  }
+
+  :global([data-theme="light"]) .center-logo {
+    filter: none;
   }
 
   .center-title {
