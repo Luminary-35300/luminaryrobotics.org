@@ -15,21 +15,21 @@
       title: '[Event Name Placeholder]',
       date: '[Date]',
       location: '[Location]',
-      desc: '[Event description placeholder] — Description of the outreach event, its goals, participants, and impact on the community.',
+      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
     },
     {
       label: 'Demo',
       title: '[Event Name Placeholder]',
       date: '[Date]',
       location: '[Location]',
-      desc: '[Event description placeholder] — Description of the outreach event, its goals, participants, and impact on the community.',
+      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
     },
     {
       label: 'Scrimmage',
       title: '[Event Name Placeholder]',
       date: '[Date]',
       location: '[Location]',
-      desc: '[Event description placeholder] — Description of the outreach event, its goals, participants, and impact on the community.',
+      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
     },
   ];
 
@@ -37,8 +37,8 @@
 </script>
 
 <svelte:head>
-  <title>Outreach – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Luminary Robotics FTC Team 35300 community outreach — STEM education, workshops, and programs that inspire the next generation of engineers." />
+  <title>Outreach – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Luminary Robotics FTC Team 36633 community outreach - STEM education, workshops, and programs that inspire the next generation of engineers." />
 </svelte:head>
 
 <PageHero
@@ -76,7 +76,7 @@
       <div>
         <span class="section-header__label">Our Approach</span>
         <h2 class="outreach-heading">Building Tomorrow's Engineers</h2>
-        <p class="outreach-p">[Outreach Description Placeholder] — A detailed explanation of Luminary Robotics' approach to community outreach, the programs offered, and the philosophy behind our efforts to make STEM accessible.</p>
+        <p class="outreach-p">[Outreach Description Placeholder] - A detailed explanation of Luminary Robotics' approach to community outreach, the programs offered, and the philosophy behind our efforts to make STEM accessible.</p>
         <p class="outreach-p">Through hands-on workshops, school visits, and robotics demonstrations, we aim to spark curiosity and build foundational skills in students of all ages and backgrounds.</p>
       </div>
       <div class="outreach-img placeholder" aria-label="Outreach image placeholder">
@@ -139,7 +139,7 @@
   <div class="container">
     <div class="blueprint-header reveal">
       <span class="section-header__label">Resources</span>
-      <h2 class="section-header__title">FTC Blueprint — Free for Everyone</h2>
+      <h2 class="section-header__title">FTC Blueprint - Free for Everyone</h2>
       <p class="section-header__desc">
         One of our core outreach missions is making FTC accessible to any student who wants to compete,
         regardless of experience or budget.
@@ -157,7 +157,7 @@
         <div>
           <h3 class="blueprint-card__title">FTCBlueprint</h3>
           <p class="blueprint-card__desc">
-            A free, comprehensive curriculum for learning FTC robotics programming from scratch — built by members of our founding teams.
+            A free, comprehensive curriculum for learning FTC robotics programming from scratch - built by members of our founding teams.
             Whether you're writing your first line of Java or optimizing autonomous routines, FTCBlueprint walks you through every step.
           </p>
           <ul class="blueprint-card__list">
@@ -183,7 +183,7 @@
         <div>
           <h3 class="blueprint-card__title">Starting a Rookie Team</h3>
           <p class="blueprint-card__desc">
-            Luminary itself was born from a merger of experienced FTC members. We know exactly how overwhelming it can be to start fresh —
+            Luminary itself was born from a merger of experienced FTC members. We know exactly how overwhelming it can be to start fresh -
             so we've put together guidance for new teams navigating their first season.
           </p>
           <ul class="blueprint-card__list">
@@ -211,7 +211,7 @@
           <p class="blueprint-card__desc">
             <em>FIRST</em> (For Inspiration and Recognition of Science and Technology) runs FTC for students grades 7–12.
             Teams of up to 15 members design, build, program, and operate robots to compete in an alliance-format game that changes every season.
-            Beyond the field, teams are judged on engineering documentation, community outreach, and gracious professionalism — the idea
+            Beyond the field, teams are judged on engineering documentation, community outreach, and gracious professionalism - the idea
             that you can compete fiercely while respecting your opponents. <strong>"FIRST is more than robots."</strong>
           </p>
           <div class="blueprint-card__links-row">

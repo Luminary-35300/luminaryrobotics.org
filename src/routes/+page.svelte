@@ -10,7 +10,7 @@
         { rank: '2nd', name: 'Inspire Award',          team: 'Slingshot' },
         { rank: '3rd', name: 'Inspire Award',          team: 'Shooting Stars' },
         { rank: '2nd', name: 'Control Award',          team: 'Hunga Munga' },
-        { rank: '—',   name: 'Finalist Alliance Captain', team: 'Hunga Munga' },
+        { rank: '-',   name: 'Finalist Alliance Captain', team: 'Hunga Munga' },
       ]
     },
     {
@@ -19,7 +19,7 @@
         { rank: '3rd', name: 'Inspire Award',           team: 'ChaiGPT' },
         { rank: '2nd', name: 'Innovate Award',          team: 'Shooting Stars' },
         { rank: '2nd', name: 'Think Award',             team: 'Slingshot' },
-        { rank: '—',   name: 'Division Finalist Alliance', team: 'Slingshot' },
+        { rank: '-',   name: 'Division Finalist Alliance', team: 'Slingshot' },
       ]
     },
     {
@@ -84,8 +84,8 @@
 </script>
 
 <svelte:head>
-  <title>Luminary Robotics – FTC Team 35300</title>
-  <meta name="description" content="FTC Team 35300 – Luminary Robotics. An elite competitive robotics organization building the future through engineering, community outreach, and STEM education." />
+  <title>Luminary Robotics – FTC Team 36633</title>
+  <meta name="description" content="FTC Team 36633 – Luminary Robotics. An elite competitive robotics organization building the future through engineering, community outreach, and STEM education." />
 </svelte:head>
 
 <!-- ── Hero ─────────────────────────────────────────────────── -->
@@ -96,13 +96,13 @@
       <div class="hero__logo-wrap">
         <img src="/logo-icon.png" alt="Luminary Robotics mark" class="hero__logo" />
       </div>
-      <div class="hero__label">FTC Team 35300</div>
+      <div class="hero__label">FTC Team 36633</div>
       <h1 class="hero__title">LUMINARY<br> </h1>
       <br>
       <div class="hero__mission">
         <blockquote class="hero__quote">
           <p>"FIRST is more than robots."</p>
-          <cite>— Founder of FIRST</cite>
+          <cite>- Founder of FIRST</cite>
         </blockquote>
       </div>
       <div class="hero__actions">
@@ -174,7 +174,7 @@
                     {/if}
                   </div>
                 {:else}
-                  <span class="award-row__rank" class:award-row__rank--dash={award.rank === '—' || award.rank === 'FIN'}>{award.rank}</span>
+                  <span class="award-row__rank" class:award-row__rank--dash={award.rank === '-' || award.rank === 'FIN'}>{award.rank}</span>
                 {/if}
                 <div class="award-row__info">
                   <span class="award-row__name" class:award-row__name--shiny={award.name.includes('Inspire Award') || award.name.includes('Winning Alliance Captain')}>{award.name}</span>

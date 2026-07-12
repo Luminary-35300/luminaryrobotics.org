@@ -16,19 +16,19 @@
     {
       label: 'Mechanical',
       title: 'Mechanical Systems',
-      desc: '[Mechanical Description Placeholder] — Overview of the drivetrain, intake, scoring mechanisms, and structural design choices made by the engineering team.',
+      desc: '[Mechanical Description Placeholder] - Overview of the drivetrain, intake, scoring mechanisms, and structural design choices made by the engineering team.',
       image: true,
     },
     {
       label: 'Software',
       title: 'Programming',
-      desc: '[Programming Description Placeholder] — Overview of the codebase architecture, teleop control scheme, sensor integration, and software tools used by the programming team.',
+      desc: '[Programming Description Placeholder] - Overview of the codebase architecture, teleop control scheme, sensor integration, and software tools used by the programming team.',
       image: true,
     },
     {
       label: 'Autonomous',
       title: 'Autonomous Routines',
-      desc: '[Autonomous Description Placeholder] — Overview of the autonomous period strategy, computer vision systems, path planning, and repeatability testing.',
+      desc: '[Autonomous Description Placeholder] - Overview of the autonomous period strategy, computer vision systems, path planning, and repeatability testing.',
       image: true,
     },
   ];
@@ -37,8 +37,8 @@
 </script>
 
 <svelte:head>
-  <title>Robot – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Explore the current season robot from Luminary Robotics FTC Team 35300 — mechanical systems, programming, autonomous routines, and technical specifications." />
+  <title>Robot – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Explore the current season robot from Luminary Robotics FTC Team 36633 - mechanical systems, programming, autonomous routines, and technical specifications." />
 </svelte:head>
 
 <PageHero
@@ -73,7 +73,7 @@
       <div>
         <span class="section-header__label">Overview</span>
         <h2 class="overview-heading">Robot Overview</h2>
-        <p class="overview-p">[Overview Text Placeholder] — A comprehensive description of this season's robot: its design philosophy, competitive strategy, and how it addresses the game's unique challenges.</p>
+        <p class="overview-p">[Overview Text Placeholder] - A comprehensive description of this season's robot: its design philosophy, competitive strategy, and how it addresses the game's unique challenges.</p>
         <p class="overview-p">The robot has been designed to maximize autonomous points, maintain reliable teleop performance, and adapt to various field configurations throughout the season.</p>
       </div>
       <div class="cad-placeholder placeholder reveal" aria-label="CAD render placeholder">
@@ -122,7 +122,7 @@
     <div class="specs-header reveal">
       <span class="section-header__label">Technical</span>
       <h2 class="section-header__title">Specifications</h2>
-      <p class="section-header__desc">[Specifications Placeholder] — Detailed technical specifications of the robot.</p>
+      <p class="section-header__desc">[Specifications Placeholder] - Detailed technical specifications of the robot.</p>
     </div>
     <div class="specs-table reveal">
       {#each specs as spec}

@@ -17,14 +17,14 @@
 </script>
 
 <svelte:head>
-  <title>About – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Learn about Luminary Robotics FTC Team 35300 — our history, mission, core values, and journey through competitive robotics." />
+  <title>About – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Learn about Luminary Robotics FTC Team 36633 - our history, mission, core values, and journey through competitive robotics." />
 </svelte:head>
 
 <PageHero
   label="About Us"
   title="Who We Are"
-  subtitle="Luminary Robotics is FTC Team 35300 — a student-led robotics team competing at the highest level while investing in our community."
+  subtitle="Luminary Robotics is FTC Team 36633 - a student-led robotics team competing at the highest level while investing in our community."
 />
 
 <div class="container">

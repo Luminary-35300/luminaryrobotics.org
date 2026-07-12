@@ -30,8 +30,8 @@
 </script>
 
 <svelte:head>
-  <title>Meet The Team – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Meet the engineers, programmers, designers, and community leaders of Luminary Robotics FTC Team 35300." />
+  <title>Meet The Team – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Meet the engineers, programmers, designers, and community leaders of Luminary Robotics FTC Team 36633." />
 </svelte:head>
 
 <PageHero
@@ -48,7 +48,7 @@
         <img src="/logo-icon.png" alt="Luminary Logo" class="center-logo" />
         <h2 class="center-title">Luminaries</h2>
         <p class="center-desc">
-          Each of our members have gained experience and developed expertise in their area — allowing us to keep learning and inspiring.
+          Each of our members have gained experience and developed expertise in their area - allowing us to keep learning and inspiring.
         </p>
       </div>
 

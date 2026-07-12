@@ -67,8 +67,8 @@
 </script>
 
 <svelte:head>
-  <title>Sponsors – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Support Luminary Robotics FTC Team 35300. Learn about sponsorship tiers, benefits, and how your partnership helps advance STEM education." />
+  <title>Sponsors – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Support Luminary Robotics FTC Team 36633. Learn about sponsorship tiers, benefits, and how your partnership helps advance STEM education." />
 </svelte:head>
 
 <PageHero
@@ -126,7 +126,7 @@
     <div class="why-header reveal">
       <span class="section-header__label">Partnership</span>
       <h2 class="section-header__title">Why Sponsor Luminary?</h2>
-      <p class="section-header__desc">[Sponsorship Text Placeholder] — A compelling description of why partnering with Luminary Robotics is a meaningful investment in STEM and community.</p>
+      <p class="section-header__desc">[Sponsorship Text Placeholder] - A compelling description of why partnering with Luminary Robotics is a meaningful investment in STEM and community.</p>
     </div>
     <div class="why-grid">
       {#each reasons as r, i}

@@ -55,14 +55,14 @@
 </script>
 
 <svelte:head>
-  <title>Contact – Luminary Robotics FTC 35300</title>
-  <meta name="description" content="Get in touch with Luminary Robotics FTC Team 35300. For sponsorship inquiries, mentorship, or general questions." />
+  <title>Contact – Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Get in touch with Luminary Robotics FTC Team 36633. For sponsorship inquiries, mentorship, or general questions." />
 </svelte:head>
 
 <PageHero
   label="Get In Touch"
   title="Contact Us"
-  subtitle="Whether you're a potential sponsor, mentor, student, or community partner — we'd love to hear from you."
+  subtitle="Whether you're a potential sponsor, mentor, student, or community partner - we'd love to hear from you."
 />
 
 <section class="section">

@@ -59,7 +59,7 @@
       </div>
       <div class="nav__logo-text">
         <span class="nav__logo-name">LUMINARY</span>
-        <span class="nav__logo-num">FTC 35300</span>
+        <span class="nav__logo-num">FTC 36633</span>
       </div>
     </a>
 
