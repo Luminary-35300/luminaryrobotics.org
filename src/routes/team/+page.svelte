@@ -6,7 +6,7 @@
     { name: 'Ishaan Desai', role: 'Programming', group: 'software', img: '/images/team/ishaan_new.png', bio: 'Specialized in Autonomous and Advanced Localization with Kalman Filters' },
     { name: 'Antara Save', role: 'Programming', group: 'software', img: '/images/team/antara.jpg', bio: 'Specialized in utilizing sensors and TeleOp' },
     { name: 'Nathan Li', role: 'Programming', group: 'software', img: '/images/team/nathan.png', bio: 'Specialized in Finite State Machines and Autonomous' },
-    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '/images/team/bao.jpg', bio: '[Short bio placeholder]' },
+    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '/images/team/bao.png', bio: '[Short bio placeholder]' },
     { name: 'Nishka Gupta', role: 'Design/Hardware', group: 'hardware', img: '', bio: '[Short bio placeholder]' },
     { name: 'Niketh Balakrishnan', role: 'Design/Hardware', group: 'hardware', img: '/images/team/niketh.jpg', bio: '[Short bio placeholder]' },
     { name: 'Rithwik Nair', role: 'Design/Hardware', group: 'hardware', img: '/images/team/rithwik.jpg', bio: '[Short bio placeholder]' },
