@@ -7,7 +7,7 @@
       label: 'platinum',
       amount: '$2,500+',
       desc: 'Premier visibility across all materials, websites, and competition presentations. Includes exclusive team liaison and presentation opportunities.',
-      logos: ['[Sponsor Logo]', '[Sponsor Logo]'],
+      logos: [],
       perks: [
         'Large logo on robot',
         'Premier website placement',
@@ -20,9 +20,9 @@
     {
       name: 'Gold',
       label: 'gold',
-      amount: '$1,000–$2,499',
+      amount: '$1,000 to $2,499',
       desc: 'Prominent recognition across team materials, website, and competition events with logo placement on robot.',
-      logos: ['[Sponsor Logo]', '[Sponsor Logo]', '[Sponsor Logo]'],
+      logos: [],
       perks: [
         'Medium logo on robot',
         'Website recognition',
@@ -34,9 +34,9 @@
     {
       name: 'Silver',
       label: 'silver',
-      amount: '$500–$999',
+      amount: '$500 to $999',
       desc: 'Website recognition and inclusion in all season-end materials and team presentations.',
-      logos: ['[Sponsor Logo]', '[Sponsor Logo]', '[Sponsor Logo]', '[Sponsor Logo]'],
+      logos: [],
       perks: [
         'Logo on team materials',
         'Website recognition',
@@ -47,9 +47,9 @@
     {
       name: 'Bronze',
       label: 'bronze',
-      amount: '$100–$499',
+      amount: '$100 to $499',
       desc: 'Website recognition and acknowledgment in team materials and communications.',
-      logos: ['[Sponsor Logo]', '[Sponsor Logo]', '[Sponsor Logo]', '[Sponsor Logo]'],
+      logos: [],
       perks: [
         'Website recognition',
         'Thank-you acknowledgment',
@@ -59,15 +59,31 @@
   ];
 
   const reasons = [
-    { icon: '◎', title: 'STEM Investment', desc: 'Directly support student engineering education and hands-on learning in your community.' },
-    { icon: '◈', title: 'Brand Visibility',  desc: 'Reach parents, educators, students, and industry professionals at regional and state competitions.' },
-    { icon: '◇', title: 'Tax Benefits',      desc: 'Contributions may qualify as charitable donations. Consult your tax professional for details.' },
-    { icon: '◉', title: 'Community Impact',  desc: 'Partner with an organization that gives back through outreach, workshops, and STEM advocacy.' },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+      title: 'STEM Investment',
+      desc: 'Directly support student engineering education and hands-on learning in your community.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>',
+      title: 'Brand Visibility',
+      desc: 'Reach parents, educators, students, and industry professionals at regional and state competitions.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h16v20l-3-2-2 2-3-2-3 2-2-2-3 2z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>',
+      title: 'Tax Benefits',
+      desc: 'Contributions may qualify as charitable donations. Consult your tax professional for details.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+      title: 'Community Impact',
+      desc: 'Partner with an organization that gives back through outreach, workshops, and STEM advocacy.',
+    },
   ];
 </script>
 
 <svelte:head>
-  <title>Sponsors – Luminary Robotics FTC 36633</title>
+  <title>Sponsors | Luminary Robotics FTC 36633</title>
   <meta name="description" content="Support Luminary Robotics FTC Team 36633. Learn about sponsorship tiers, benefits, and how your partnership helps advance STEM education." />
 </svelte:head>
 
@@ -126,12 +142,12 @@
     <div class="why-header reveal">
       <span class="section-header__label">Partnership</span>
       <h2 class="section-header__title">Why Sponsor Luminary?</h2>
-      <p class="section-header__desc">[Sponsorship Text Placeholder] - A compelling description of why partnering with Luminary Robotics is a meaningful investment in STEM and community.</p>
+      <p class="section-header__desc">Partnering with Luminary Robotics is a direct investment in STEM education and in the students building it in your community.</p>
     </div>
     <div class="why-grid">
       {#each reasons as r, i}
         <div class="why-card reveal" style="transition-delay:{i*80}ms">
-          <div class="why-card__icon">{r.icon}</div>
+          <div class="why-card__icon" aria-hidden="true">{@html r.icon}</div>
           <h3 class="why-card__title">{r.title}</h3>
           <p class="why-card__desc">{r.desc}</p>
         </div>
@@ -275,10 +291,14 @@
   .why-card:hover { border-color: var(--border-2); }
 
   .why-card__icon {
-    font-size: 1.4rem;
     color: var(--accent-blue);
     margin-bottom: var(--space-4);
-    opacity: 0.8;
+    display: flex;
+  }
+
+  .why-card__icon :global(svg) {
+    width: 24px;
+    height: 24px;
   }
 
   .why-card__title {

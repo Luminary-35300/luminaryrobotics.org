@@ -1,44 +1,45 @@
 <script>
   import PageHero from '$lib/components/PageHero.svelte';
+  import MediaFrame from '$lib/components/MediaFrame.svelte';
 
   const specs = [
-    { label: 'Weight',         value: '[XX lbs]' },
-    { label: 'Dimensions',     value: '[X" × X" × X"]' },
-    { label: 'Drive System',   value: '[Mecanum / Tank / Swerve]' },
-    { label: 'Programming',    value: '[Java / Blocks]' },
-    { label: 'Control Hub',    value: 'REV Control Hub' },
-    { label: 'Motors',         value: '[# × Motor Type]' },
-    { label: 'Servos',         value: '[# × Servo Type]' },
-    { label: 'Sensors',        value: '[Sensors placeholder]' },
+    { label: 'Weight',       value: 'TBA' },
+    { label: 'Dimensions',   value: 'TBA' },
+    { label: 'Drive System', value: 'TBA' },
+    { label: 'Programming',  value: 'Java' },
+    { label: 'Control Hub',  value: 'REV Control Hub' },
+    { label: 'Motors',       value: 'TBA' },
+    { label: 'Servos',       value: 'TBA' },
+    { label: 'Sensors',      value: 'TBA' },
   ];
 
   const systems = [
     {
       label: 'Mechanical',
       title: 'Mechanical Systems',
-      desc: '[Mechanical Description Placeholder] - Overview of the drivetrain, intake, scoring mechanisms, and structural design choices made by the engineering team.',
-      image: true,
+      desc: 'The drivetrain, intake, scoring mechanisms, and structural design built by our engineering team. Full write-up coming as the season progresses.',
+      caption: 'Mechanical',
     },
     {
       label: 'Software',
       title: 'Programming',
-      desc: '[Programming Description Placeholder] - Overview of the codebase architecture, teleop control scheme, sensor integration, and software tools used by the programming team.',
-      image: true,
+      desc: 'Our codebase architecture, teleop control scheme, sensor integration, and the tools our programming team relies on. Full write-up coming soon.',
+      caption: 'Programming',
     },
     {
       label: 'Autonomous',
       title: 'Autonomous Routines',
-      desc: '[Autonomous Description Placeholder] - Overview of the autonomous period strategy, computer vision systems, path planning, and repeatability testing.',
-      image: true,
+      desc: 'Autonomous strategy, computer vision, path planning, and the repeatability testing behind it. Full write-up coming soon.',
+      caption: 'Autonomous',
     },
   ];
 
-  const gallery = ['[Photo 1]', '[Photo 2]', '[Photo 3]', '[Photo 4]', '[CAD Render]', '[Detail Shot]'];
+  const gallery = ['Robot', 'Robot', 'Robot', 'Robot', 'CAD', 'Detail'];
 </script>
 
 <svelte:head>
-  <title>Robot – Luminary Robotics FTC 36633</title>
-  <meta name="description" content="Explore the current season robot from Luminary Robotics FTC Team 36633 - mechanical systems, programming, autonomous routines, and technical specifications." />
+  <title>Robot | Luminary Robotics FTC 36633</title>
+  <meta name="description" content="The current season robot from Luminary Robotics FTC Team 36633: mechanical systems, programming, autonomous routines, and technical specifications." />
 </svelte:head>
 
 <PageHero
@@ -50,19 +51,7 @@
 <!-- Hero image -->
 <section class="robot-hero section--sm">
   <div class="container">
-    <div class="robot-hero__image placeholder reveal" aria-label="Robot hero image placeholder">
-      <div class="robot-hero__inner">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
-          <rect x="20" y="8" width="40" height="30" rx="2" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="10" y="42" width="60" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="30" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="50" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="4" y="48" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-          <rect x="68" y="48" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-        <p>[Robot Hero Image]</p>
-      </div>
-    </div>
+    <MediaFrame src="/images/robot/hero.jpg" alt="Luminary Robotics competition robot" caption="Robot" ratio="16 / 8" class="reveal" />
   </div>
 </section>
 
@@ -73,14 +62,10 @@
       <div>
         <span class="section-header__label">Overview</span>
         <h2 class="overview-heading">Robot Overview</h2>
-        <p class="overview-p">[Overview Text Placeholder] - A comprehensive description of this season's robot: its design philosophy, competitive strategy, and how it addresses the game's unique challenges.</p>
-        <p class="overview-p">The robot has been designed to maximize autonomous points, maintain reliable teleop performance, and adapt to various field configurations throughout the season.</p>
+        <p class="overview-p">A look at this season's robot: how it's designed, the strategy behind it, and how it handles the challenges of this year's game. Full details are coming as we lock in the build.</p>
+        <p class="overview-p">Our goal is a robot that scores well in autonomous, stays reliable through teleop, and adapts to different field setups across the season.</p>
       </div>
-      <div class="cad-placeholder placeholder reveal" aria-label="CAD render placeholder">
-        <div>
-          <p class="placeholder-label">[CAD Render]</p>
-        </div>
-      </div>
+      <MediaFrame src="/images/robot/cad.jpg" alt="CAD render of the robot" caption="CAD" ratio="1 / 1" class="reveal" />
     </div>
   </div>
 </section>
@@ -102,9 +87,7 @@
             <h3 class="system-heading">{sys.title}</h3>
             <p class="system-desc">{sys.desc}</p>
           </div>
-          <div class="system-image placeholder" aria-label="{sys.title} image placeholder">
-            <p class="placeholder-label">[{sys.title} Image]</p>
-          </div>
+          <MediaFrame src={sys.img} alt="{sys.title}" caption={sys.caption} ratio="16 / 10" class="system-image" />
         </div>
         {#if i < systems.length - 1}
           <div class="divider"></div>
@@ -122,13 +105,13 @@
     <div class="specs-header reveal">
       <span class="section-header__label">Technical</span>
       <h2 class="section-header__title">Specifications</h2>
-      <p class="section-header__desc">[Specifications Placeholder] - Detailed technical specifications of the robot.</p>
+      <p class="section-header__desc">Technical specifications for this season's robot. Values marked TBA are finalized closer to competition.</p>
     </div>
     <div class="specs-table reveal">
       {#each specs as spec}
         <div class="spec-row">
           <dt class="spec-label">{spec.label}</dt>
-          <dd class="spec-value">{spec.value}</dd>
+          <dd class="spec-value" class:spec-value--tba={spec.value === 'TBA'}>{spec.value}</dd>
         </div>
       {/each}
     </div>
@@ -146,35 +129,13 @@
     </div>
     <div class="gallery-grid">
       {#each gallery as item, i}
-        <div class="gallery-item placeholder reveal" style="transition-delay:{i*60}ms" aria-label="{item}">{item}</div>
+        <MediaFrame src={''} alt="Robot photo" caption={item} ratio="4 / 3" class="reveal" />
       {/each}
     </div>
   </div>
 </section>
 
 <style>
-  .robot-hero__image {
-    width: 100%;
-    height: 480px;
-    border-radius: var(--radius);
-    background: var(--surface);
-    font-size: var(--text-sm);
-    color: var(--text-3);
-  }
-
-  .robot-hero__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-4);
-    color: var(--border-2);
-  }
-
-  .robot-hero__inner p {
-    color: var(--text-3);
-    font-size: var(--text-sm);
-  }
-
   .overview-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -195,13 +156,6 @@
     color: var(--text-2);
     line-height: 1.75;
     margin-bottom: var(--space-3);
-  }
-
-  .cad-placeholder {
-    aspect-ratio: 1;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
   }
 
   .systems-header { margin-bottom: var(--space-8); }
@@ -229,13 +183,6 @@
     font-size: var(--text-base);
     color: var(--text-2);
     line-height: 1.75;
-  }
-
-  .system-image {
-    aspect-ratio: 16/10;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
   }
 
   .specs-header { margin-bottom: var(--space-6); }
@@ -269,28 +216,17 @@
     color: var(--text);
   }
 
+  .spec-value--tba {
+    color: var(--text-3);
+    letter-spacing: 0.06em;
+  }
+
   .gallery-header { margin-bottom: var(--space-6); }
 
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
-  }
-
-  .gallery-item {
-    aspect-ratio: 4/3;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
-    transition: border-color var(--transition);
-  }
-
-  .gallery-item:hover { border-color: var(--border-2); }
-
-  .placeholder-label {
-    font-size: var(--text-sm);
-    color: var(--text-3);
-    margin: 0;
   }
 
   .divider { height: 1px; background: var(--border); }
@@ -300,12 +236,10 @@
       grid-template-columns: 1fr;
       direction: ltr;
     }
-    .cad-placeholder { display: none; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 560px) {
     .gallery-grid { grid-template-columns: 1fr; }
-    .robot-hero__image { height: 280px; }
   }
 </style>

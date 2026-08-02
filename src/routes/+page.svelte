@@ -1,5 +1,6 @@
 <script>
   import StatCounter from '$lib/components/StatCounter.svelte';
+  import MediaFrame from '$lib/components/MediaFrame.svelte';
 
   const achievements = [
     {
@@ -50,14 +51,6 @@
     { value: 3,    suffix: '',  label: 'Seasons Competed',   desc: 'Years of experience' },
   ];
 
-  const sponsors = [
-    '[Sponsor Logo]',
-    '[Sponsor Logo]',
-    '[Sponsor Logo]',
-    '[Sponsor Logo]',
-    '[Sponsor Logo]',
-  ];
-
   const previews = [
     {
       label: 'Outreach',
@@ -65,6 +58,7 @@
       desc: 'Luminary Robotics is committed to growing STEM education in our community through workshops, demos, and partnerships.',
       href: '/outreach',
       cta: 'View Outreach',
+      img: '',
     },
     {
       label: 'Robot',
@@ -72,6 +66,7 @@
       desc: 'Engineered for precision. Explore the mechanical systems, programming, and autonomous routines powering our competition robot.',
       href: '/robot',
       cta: 'Meet the Robot',
+      img: '',
     },
     {
       label: 'Team',
@@ -79,13 +74,14 @@
       desc: 'A dedicated team of engineers, programmers, designers, and community advocates working toward a common goal.',
       href: '/team',
       cta: 'Meet the Team',
+      img: '',
     },
   ];
 </script>
 
 <svelte:head>
-  <title>Luminary Robotics – FTC Team 36633</title>
-  <meta name="description" content="FTC Team 36633 – Luminary Robotics. An elite competitive robotics organization building the future through engineering, community outreach, and STEM education." />
+  <title>Luminary Robotics | FTC Team 36633</title>
+  <meta name="description" content="Luminary Robotics, FTC Team 36633. A competitive robotics team building the future through engineering, community outreach, and STEM education." />
 </svelte:head>
 
 <!-- ── Hero ─────────────────────────────────────────────────── -->
@@ -97,12 +93,11 @@
         <img src="/logo-icon.png" alt="Luminary Robotics mark" class="hero__logo" />
       </div>
       <div class="hero__label">FTC Team 36633</div>
-      <h1 class="hero__title">LUMINARY<br> </h1>
-      <br>
+      <h1 class="hero__title">LUMINARY</h1>
       <div class="hero__mission">
         <blockquote class="hero__quote">
           <p>"FIRST is more than robots."</p>
-          <cite>- Founder of FIRST</cite>
+          <cite>Founder of FIRST</cite>
         </blockquote>
       </div>
       <div class="hero__actions">
@@ -111,24 +106,13 @@
       </div>
     </div>
     <div class="hero__visual">
-      <div class="hero__robot placeholder" aria-label="Hero robot image placeholder">
-        <div class="hero__robot-inner">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.4">
-            <rect x="20" y="8" width="40" height="30" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="10" y="42" width="60" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="30" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="50" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="4" y="48" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="68" y="48" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M32 70v6M48 70v6M26 76h28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <p class="hero__robot-label">[Hero Robot Image]</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero__scroll-hint" aria-hidden="true">
-    <div class="hero__scroll-line"></div>
+      <MediaFrame
+        src="/images/team-group.jpg"
+        alt="The Luminary Robotics team, FTC 36633"
+        caption="2026 Season Team"
+        ratio="4 / 3"
+        class="hero__photo"
+      />
   </div>
 </section>
 
@@ -204,20 +188,22 @@
 
 <div class="divider-accent container"><div class="divider--accent"></div></div>
 
-<!-- ── Featured Sponsors ─────────────────────────────────────── -->
+<!-- ── Sponsors ──────────────────────────────────────────────── -->
 <section class="section--sm sponsors-preview">
   <div class="container">
     <div class="sponsors-preview__header reveal">
       <span class="section-header__label">Partners</span>
       <div class="sponsors-preview__title-row">
-        <h2 class="section-header__title" style="margin-bottom:0">Featured Sponsors</h2>
-        <a href="/sponsors" class="btn btn--ghost btn--sm">View All →</a>
+        <h2 class="section-header__title" style="margin-bottom:0">Back Our Rookie Season</h2>
+        <a href="/sponsors" class="btn btn--ghost btn--sm">Sponsorship Tiers →</a>
       </div>
     </div>
-    <div class="sponsors-preview__logos reveal">
-      {#each sponsors as sp}
-        <div class="sponsor-logo-placeholder placeholder" aria-label={sp}>{sp}</div>
-      {/each}
+    <div class="sponsors-invite reveal">
+      <p class="sponsors-invite__text">
+        Luminary is a first-year team assembling its founding group of partners. Your support
+        puts hardware in students' hands and our robot on the field, with your name alongside it.
+      </p>
+      <a href="/contact" class="btn btn--outline btn--sm">Become a Founding Sponsor</a>
     </div>
   </div>
 </section>
@@ -232,7 +218,7 @@
     <div class="previews__grid">
       {#each previews as preview, i}
         <a href={preview.href} class="preview-card reveal" style="transition-delay: {i * 100}ms" aria-label="{preview.title}">
-          <div class="preview-card__image placeholder" aria-hidden="true">[Image]</div>
+          <MediaFrame src={preview.img} alt={preview.title} caption={preview.label} ratio="16 / 10" class="preview-card__image" />
           <div class="preview-card__body">
             <span class="preview-card__label">{preview.label}</span>
             <h3 class="preview-card__title">{preview.title}</h3>
@@ -358,56 +344,25 @@
 
   .hero__visual {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero__robot {
-    width: 100%;
-    max-width: 380px;
-    aspect-ratio: 1/1;
-    border-radius: var(--radius);
-    background: var(--surface);
-    border: 1px dashed var(--border-2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: var(--space-4);
-    color: var(--border-2);
-  }
-
-  .hero__robot-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: var(--space-3);
   }
 
-  .hero__robot-label {
-    font-size: var(--text-sm);
+  .hero__visual :global(.hero__photo) {
+    box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.6);
+  }
+
+  :global([data-theme='light']) .hero__visual :global(.hero__photo) {
+    box-shadow: 0 24px 60px -34px rgba(13, 13, 22, 0.35);
+  }
+
+  .hero__photo-tag {
+    font-size: var(--text-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--text-3);
-    letter-spacing: 0.04em;
-  }
-
-  .hero__scroll-hint {
-    position: absolute;
-    bottom: var(--space-6);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .hero__scroll-line {
-    width: 1px;
-    height: 48px;
-    background: linear-gradient(to bottom, var(--border-2), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
-
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; }
-    50%       { opacity: 1; }
+    padding-left: var(--space-1);
   }
 
   /* ── Definition ───────────────────────────── */
@@ -569,38 +524,17 @@
   }
 
   .award-row__name--shiny {
-    background: linear-gradient(
-      110deg,
-      #c59b27 0%,
-      #e0af2c 25%,
-      #f5d061 45%,
-      #e0af2c 65%,
-      #c59b27 100%
-    );
-    background-size: 200% auto;
+    background: linear-gradient(110deg, #c59b27 0%, #f5d061 50%, #c59b27 100%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shinyGold 8s linear infinite;
   }
 
   :global([data-theme="light"]) .award-row__name--shiny {
-    background: linear-gradient(
-      110deg,
-      #8c6b10 0%,
-      #af8718 25%,
-      #d4af37 45%,
-      #af8718 65%,
-      #8c6b10 100%
-    );
-    background-size: 200% auto;
+    background: linear-gradient(110deg, #8c6b10 0%, #d4af37 50%, #8c6b10 100%);
     -webkit-background-clip: text;
     background-clip: text;
-  }
-
-  @keyframes shinyGold {
-    to { background-position: 200% center; }
   }
 
   .award-row__team {
@@ -629,23 +563,29 @@
     gap: var(--space-4);
   }
 
-  .sponsors-preview__logos {
+  .sponsors-invite {
     display: flex;
-    gap: var(--space-4);
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
     margin-top: var(--space-6);
+    padding: var(--space-6) var(--space-7);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: var(--radius);
+    flex-wrap: wrap;
   }
 
-  .sponsor-logo-placeholder {
-    height: 64px;
-    min-width: 120px;
-    flex: 1;
-    font-size: var(--text-xs);
-    color: var(--text-3);
-    background: var(--surface);
-    border: 1px dashed var(--border-2);
-    border-radius: var(--radius);
+  .sponsors-invite__text {
+    font-size: var(--text-base);
+    color: var(--text-2);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0;
   }
+
+  .sponsors-invite .btn { flex-shrink: 0; }
 
   /* ── Previews ─────────────────────────────── */
   .previews__header { margin-bottom: var(--space-7); }
@@ -664,20 +604,18 @@
     border-radius: var(--radius);
     overflow: hidden;
     text-decoration: none;
-    transition: border-color var(--transition), transform var(--transition-slow);
+    transition: border-color var(--transition);
   }
 
   .preview-card:hover {
     border-color: var(--border-2);
-    transform: translateY(-2px);
   }
 
-  .preview-card__image {
-    height: 200px;
-    background: var(--surface-2);
+  /* MediaFrame sits flush inside the card: drop its own frame, keep a base divider */
+  .preview-card :global(.preview-card__image) {
+    border: none;
     border-bottom: 1px solid var(--border);
-    font-size: var(--text-sm);
-    color: var(--text-3);
+    border-radius: 0;
   }
 
   .preview-card__body {
@@ -729,8 +667,9 @@
   }
 
   @media (max-width: 900px) {
-    .hero__inner { grid-template-columns: 1fr; text-align: left; }
-    .hero__visual { display: none; }
+    .hero { min-height: auto; }
+    .hero__inner { grid-template-columns: 1fr; text-align: left; gap: var(--space-7); }
+    .hero__visual { max-width: 460px; }
     .previews__grid { grid-template-columns: 1fr; }
   }
 

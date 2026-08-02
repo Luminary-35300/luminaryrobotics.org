@@ -1,44 +1,13 @@
 <script>
   import PageHero from '$lib/components/PageHero.svelte';
-  import StatCounter from '$lib/components/StatCounter.svelte';
+  import MediaFrame from '$lib/components/MediaFrame.svelte';
 
-  const stats = [
-    { value: 0, suffix: '+', label: 'Students Reached',  desc: 'Placeholder' },
-    { value: 0, suffix: '+', label: 'Events Hosted',     desc: 'Placeholder' },
-    { value: 0, suffix: '+', label: 'Volunteer Hours',   desc: 'Placeholder' },
-    { value: 0, suffix: '',  label: 'Partner Schools',   desc: 'Placeholder' },
-  ];
-
-  const events = [
-    {
-      label: 'Workshop',
-      title: '[Event Name Placeholder]',
-      date: '[Date]',
-      location: '[Location]',
-      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
-    },
-    {
-      label: 'Demo',
-      title: '[Event Name Placeholder]',
-      date: '[Date]',
-      location: '[Location]',
-      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
-    },
-    {
-      label: 'Scrimmage',
-      title: '[Event Name Placeholder]',
-      date: '[Date]',
-      location: '[Location]',
-      desc: '[Event description placeholder] - Description of the outreach event, its goals, participants, and impact on the community.',
-    },
-  ];
-
-  const gallery = ['[Image]','[Image]','[Image]','[Image]'];
+  const gallery = ['Outreach', 'Outreach', 'Outreach', 'Outreach'];
 </script>
 
 <svelte:head>
-  <title>Outreach – Luminary Robotics FTC 36633</title>
-  <meta name="description" content="Luminary Robotics FTC Team 36633 community outreach - STEM education, workshops, and programs that inspire the next generation of engineers." />
+  <title>Outreach | Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Luminary Robotics FTC Team 36633 community outreach: STEM education, workshops, and programs that inspire the next generation of engineers." />
 </svelte:head>
 
 <PageHero
@@ -50,24 +19,9 @@
 <!-- Hero image -->
 <section class="section--sm">
   <div class="container">
-    <div class="outreach-hero placeholder reveal" aria-label="Outreach hero image placeholder">
-      <p>[Outreach Hero Image]</p>
-    </div>
+    <MediaFrame src="/images/outreach/hero.jpg" alt="Luminary Robotics at a community outreach event" caption="Outreach" ratio="16 / 7" class="reveal" />
   </div>
 </section>
-
-<!-- Stats -->
-<section class="section--sm">
-  <div class="container">
-    <div class="outreach-stats reveal">
-      {#each stats as stat}
-        <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} desc={stat.desc} />
-      {/each}
-    </div>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
 
 <!-- Description -->
 <section class="section">
@@ -76,12 +30,10 @@
       <div>
         <span class="section-header__label">Our Approach</span>
         <h2 class="outreach-heading">Building Tomorrow's Engineers</h2>
-        <p class="outreach-p">[Outreach Description Placeholder] - A detailed explanation of Luminary Robotics' approach to community outreach, the programs offered, and the philosophy behind our efforts to make STEM accessible.</p>
-        <p class="outreach-p">Through hands-on workshops, school visits, and robotics demonstrations, we aim to spark curiosity and build foundational skills in students of all ages and backgrounds.</p>
+        <p class="outreach-p">We want STEM to feel reachable. That shapes the programs we run and how we run them, from the youngest students to those already thinking about their own teams.</p>
+        <p class="outreach-p">Through hands-on workshops, school visits, and robot demos, we try to spark curiosity and help students pick up real skills, whatever their background.</p>
       </div>
-      <div class="outreach-img placeholder" aria-label="Outreach image placeholder">
-        <p>[Outreach Image]</p>
-      </div>
+      <MediaFrame src="/images/outreach/approach.jpg" alt="Students at a Luminary Robotics workshop" caption="Outreach" ratio="4 / 3" class="outreach-img" />
     </div>
   </div>
 </section>
@@ -94,23 +46,14 @@
     <div class="events-header reveal">
       <span class="section-header__label">Programs</span>
       <h2 class="section-header__title">Outreach Events</h2>
-      <p class="section-header__desc">A selection of community programs and events organized by Luminary Robotics.</p>
+      <p class="section-header__desc">Our first season's community programs and events.</p>
     </div>
-    <div class="events-grid">
-      {#each events as event, i}
-        <div class="event-card reveal" style="transition-delay:{i*80}ms">
-          <div class="event-card__header">
-            <span class="label label--blue">{event.label}</span>
-            <div class="event-card__meta">
-              <span class="event-card__date">{event.date}</span>
-              <span class="event-card__sep">·</span>
-              <span class="event-card__loc">{event.location}</span>
-            </div>
-          </div>
-          <h3 class="event-card__title">{event.title}</h3>
-          <p class="event-card__desc">{event.desc}</p>
-        </div>
-      {/each}
+    <div class="events-note reveal">
+      <p class="events-note__text">
+        As a first-year team, we're scheduling our first workshops, school visits, and demos now.
+        Event recaps will land here as they happen. Want us at your school or event?
+      </p>
+      <a href="/contact" class="btn btn--outline btn--sm">Invite Luminary</a>
     </div>
   </div>
 </section>
@@ -126,7 +69,7 @@
     </div>
     <div class="outreach-gallery">
       {#each gallery as img, i}
-        <div class="gallery-img placeholder reveal" style="transition-delay:{i*60}ms" aria-label="{img}">{img}</div>
+        <MediaFrame src={''} alt="Outreach photo" caption={img} ratio="1 / 1" class="reveal" />
       {/each}
     </div>
   </div>
@@ -139,7 +82,7 @@
   <div class="container">
     <div class="blueprint-header reveal">
       <span class="section-header__label">Resources</span>
-      <h2 class="section-header__title">FTC Blueprint - Free for Everyone</h2>
+      <h2 class="section-header__title">FTC Blueprint, Free for Everyone</h2>
       <p class="section-header__desc">
         One of our core outreach missions is making FTC accessible to any student who wants to compete,
         regardless of experience or budget.
@@ -157,7 +100,7 @@
         <div>
           <h3 class="blueprint-card__title">FTCBlueprint</h3>
           <p class="blueprint-card__desc">
-            A free, comprehensive curriculum for learning FTC robotics programming from scratch - built by members of our founding teams.
+            A free, comprehensive curriculum for learning FTC robotics programming from scratch, built by members of our founding teams.
             Whether you're writing your first line of Java or optimizing autonomous routines, FTCBlueprint walks you through every step.
           </p>
           <ul class="blueprint-card__list">
@@ -209,9 +152,9 @@
         <div>
           <h3 class="blueprint-card__title">What is FIRST Tech Challenge?</h3>
           <p class="blueprint-card__desc">
-            <em>FIRST</em> (For Inspiration and Recognition of Science and Technology) runs FTC for students grades 7–12.
+            <em>FIRST</em> (For Inspiration and Recognition of Science and Technology) runs FTC for students in grades 7 to 12.
             Teams of up to 15 members design, build, program, and operate robots to compete in an alliance-format game that changes every season.
-            Beyond the field, teams are judged on engineering documentation, community outreach, and gracious professionalism - the idea
+            Beyond the field, teams are judged on engineering documentation, community outreach, and gracious professionalism: the idea
             that you can compete fiercely while respecting your opponents. <strong>"FIRST is more than robots."</strong>
           </p>
           <div class="blueprint-card__links-row">
@@ -225,23 +168,6 @@
 </section>
 
 <style>
-  .outreach-hero {
-    width: 100%;
-    height: 420px;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
-  }
-
-  .outreach-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-    overflow: hidden;
-  }
-
   .outreach-desc {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -264,63 +190,30 @@
     margin-bottom: var(--space-3);
   }
 
-  .outreach-img {
-    aspect-ratio: 4/3;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
-  }
-
   .events-header { margin-bottom: var(--space-7); }
 
-  .events-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-5);
-  }
-
-  .event-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: var(--space-6);
-    transition: border-color var(--transition);
-  }
-
-  .event-card:hover { border-color: var(--border-2); }
-
-  .event-card__header {
+  .events-note {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: var(--space-4);
-    gap: var(--space-3);
+    gap: var(--space-6);
+    padding: var(--space-6) var(--space-7);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: var(--radius);
     flex-wrap: wrap;
   }
 
-  .event-card__meta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--text-xs);
-    color: var(--text-3);
+  .events-note__text {
+    font-size: var(--text-base);
+    color: var(--text-2);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0;
   }
 
-  .event-card__sep { opacity: 0.5; }
-
-  .event-card__title {
-    font-size: var(--text-md);
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: var(--space-3);
-    letter-spacing: -0.01em;
-  }
-
-  .event-card__desc {
-    font-size: var(--text-sm);
-    color: var(--text-3);
-    line-height: 1.65;
-  }
+  .events-note .btn { flex-shrink: 0; }
 
   .gallery-header { margin-bottom: var(--space-6); }
 
@@ -328,13 +221,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-4);
-  }
-
-  .gallery-img {
-    aspect-ratio: 1;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-    color: var(--text-3);
   }
 
   /* ── FTC Blueprint ─────────────────────────── */
@@ -412,7 +298,7 @@
   }
 
   .blueprint-card__list li::before {
-    content: '–';
+    content: '-';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
@@ -438,20 +324,17 @@
   .divider { height: 1px; background: var(--border); }
 
   @media (max-width: 1024px) {
-    .outreach-stats { grid-template-columns: repeat(2, 1fr); }
     .outreach-gallery { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 900px) {
     .outreach-desc { grid-template-columns: 1fr; }
     .outreach-img { display: none; }
-    .events-grid { grid-template-columns: 1fr; }
     .blueprint-grid { grid-template-columns: 1fr; }
     .blueprint-card--wide { grid-column: 1; }
   }
 
   @media (max-width: 560px) {
-    .outreach-hero { height: 260px; }
     .outreach-gallery { grid-template-columns: repeat(2, 1fr); }
     .blueprint-card { flex-direction: column; }
   }

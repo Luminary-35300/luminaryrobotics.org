@@ -1,41 +1,10 @@
 <script>
-  import { onMount } from 'svelte';
-
   let { value = 0, suffix = '', label = '', desc = '' } = $props();
-
-  let displayed = $state(0);
-  let el = $state(null);
-
-  onMount(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        animateCount();
-        observer.disconnect();
-      }
-    }, { threshold: 0.5 });
-
-    if (el) observer.observe(el);
-    return () => observer.disconnect();
-  });
-
-  function animateCount() {
-    const duration = 1600;
-    const start = performance.now();
-    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-
-    function step(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      displayed = Math.round(easeOut(progress) * value);
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
 </script>
 
-<div class="stat-card" bind:this={el}>
+<div class="stat-card">
   <div class="stat-card__value">
-    {displayed}{suffix}
+    {value}{suffix}
   </div>
   <div class="stat-card__label">{label}</div>
   {#if desc}

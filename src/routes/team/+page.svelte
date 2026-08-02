@@ -6,12 +6,12 @@
     { name: 'Ishaan Desai', role: 'Programming', group: 'software', img: '/images/team/ishaan_new.png', bio: 'Specialized in Autonomous and Advanced Localization with Kalman Filters' },
     { name: 'Antara Save', role: 'Programming', group: 'software', img: '/images/team/antara.jpg', bio: 'Specialized in utilizing sensors and TeleOp' },
     { name: 'Nathan Li', role: 'Programming', group: 'software', img: '/images/team/nathan.png', bio: 'Specialized in Finite State Machines and Autonomous' },
-    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '/images/team/bao.png', bio: '[Short bio placeholder]' },
-    { name: 'Nishka Gupta', role: 'Design/Hardware', group: 'hardware', img: '/images/team/nishka.jpeg', bio: '[Short bio placeholder]' },
-    { name: 'Niketh Balakrishnan', role: 'Design/Hardware', group: 'hardware', img: '/images/team/niketh.jpg', bio: '[Short bio placeholder]' },
-    { name: 'Rithwik Nair', role: 'Design/Hardware', group: 'hardware', img: '/images/team/rithwik.jpg', bio: '[Short bio placeholder]' },
-    { name: 'Reett Aulakh', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/reett.jpg', bio: '[Short bio placeholder]' },
-    { name: 'Aanya Pathak', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/aanya.jpg', bio: '[Short bio placeholder]' },
+    { name: 'Bao Blows', role: 'Design/Hardware', group: 'hardware', img: '/images/team/bao.png', bio: '' },
+    { name: 'Nishka Gupta', role: 'Design/Hardware', group: 'hardware', img: '/images/team/nishka.jpeg', bio: '' },
+    { name: 'Niketh Balakrishnan', role: 'Design/Hardware', group: 'hardware', img: '/images/team/niketh.jpg', bio: '' },
+    { name: 'Rithwik Nair', role: 'Design/Hardware', group: 'hardware', img: '/images/team/rithwik.jpg', bio: '' },
+    { name: 'Reett Aulakh', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/reett.jpg', bio: '' },
+    { name: 'Aanya Pathak', role: 'Outreach/Inspire', group: 'outreach', img: '/images/team/aanya.jpg', bio: '' },
   ];
 
   const mentors = [
@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-  <title>Meet The Team – Luminary Robotics FTC 36633</title>
+  <title>Meet The Team | Luminary Robotics FTC 36633</title>
   <meta name="description" content="Meet the engineers, programmers, designers, and community leaders of Luminary Robotics FTC Team 36633." />
 </svelte:head>
 
@@ -48,7 +48,7 @@
         <img src="/logo-icon.png" alt="Luminary Logo" class="center-logo" />
         <h2 class="center-title">Luminaries</h2>
         <p class="center-desc">
-          Each of our members have gained experience and developed expertise in their area - allowing us to keep learning and inspiring.
+          Every member has built real expertise in their own area, which keeps the whole team learning from one another.
         </p>
       </div>
 
@@ -59,7 +59,7 @@
           style="--angle: {angle}deg; --node-color: {getGroupColor(student.group)};"
           tabindex="0"
           role="button"
-          aria-label="{student.name} - {student.role}"
+          aria-label="{student.name}, {student.role}"
         >
           <div class="member-photo-wrapper">
             {#if student.img}
@@ -211,13 +211,7 @@
     border: 3px solid var(--node-color);
     background: var(--surface);
     overflow: hidden;
-    transition: transform var(--transition) cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .member-node:hover .member-photo-wrapper,
-  .member-node:focus-within .member-photo-wrapper {
-    transform: scale(1.15);
   }
 
   .member-photo {
@@ -250,7 +244,6 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
     pointer-events: none;
     z-index: 20;
   }

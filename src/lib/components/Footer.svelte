@@ -26,7 +26,7 @@
           <img src="/logo-icon.png" alt="Luminary Robotics mark" class="footer__logo-img" />
           <span class="footer__logo-name">Luminary Robotics</span>
         </div>
-        <p class="footer__tagline">FTC Team 36633 - Building the future,<br>one season at a time.</p>
+        <p class="footer__tagline">FTC Team 36633.<br>Building the future, one season at a time.</p>
         <div class="footer__socials">
           <a href="https://instagram.com/luminaryrobotics" class="footer__social" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -75,7 +75,7 @@
 
     <div class="footer__bottom">
       <p class="footer__copy">
-        © {year} Luminary Robotics - FTC Team 36633. All rights reserved.
+        © {year} Luminary Robotics, FTC Team 36633. All rights reserved.
       </p>
       <p class="footer__ftc">
         Part of the <em>FIRST</em> Tech Challenge program.

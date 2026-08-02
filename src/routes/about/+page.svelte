@@ -3,28 +3,44 @@
   import Timeline from '$lib/components/Timeline.svelte';
 
   const values = [
-    { icon: '◎', title: 'Engineering Excellence', desc: 'We approach every challenge with rigor, precision, and an unwavering commitment to quality craftsmanship.' },
-    { icon: '◈', title: 'Inclusive Collaboration', desc: 'Every voice on the team matters. We build better solutions through diverse perspectives and shared ownership.' },
-    { icon: '◇', title: 'Community Impact', desc: 'Our work extends beyond competitions. We invest in the next generation through outreach and education.' },
-    { icon: '◉', title: 'Continuous Growth', desc: 'We embrace failure as a learning opportunity and iterate relentlessly toward improvement.' },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
+      title: 'Engineering Excellence',
+      desc: 'We approach every challenge with rigor, precision, and a commitment to quality craftsmanship.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      title: 'Inclusive Collaboration',
+      desc: 'Every voice on the team matters. We build better solutions through shared ownership.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+      title: 'Community Impact',
+      desc: 'Our work extends beyond competitions. We invest in the next generation through outreach.',
+    },
+    {
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+      title: 'Continuous Growth',
+      desc: 'We treat every failure as a lesson and keep iterating toward something better.',
+    },
   ];
 
   const timeline = [
-    { year: 'Past Seasons', title: 'A Legacy of Excellence', desc: 'Members from Hunga Munga, Slingshot, ChaiGPT, and Shooting Stars competed individually, developing specialized expertise and mutual respect.' },
-    { year: 'This Year', title: 'The Dream Team Assembles', desc: 'Recognizing that we are stronger together, the top talent from four teams merged to form Luminary Robotics for our inaugural season.' },
-    { year: 'Present', title: 'More Than Robots', desc: 'We are setting a new standard for how competitors can unite, sharing knowledge and building a lasting engineering legacy.' },
+    { year: 'Past Seasons', title: 'Four Separate Teams', desc: 'Members from Hunga Munga, Slingshot, ChaiGPT, and Shooting Stars competed on their own, each building their own expertise and, along the way, respect for one another.' },
+    { year: 'This Year', title: 'Coming Together', desc: 'Members from those four teams merged to form Luminary Robotics for our first season as one group.' },
+    { year: 'Present', title: 'More Than Robots', desc: 'We compete hard and share what we know, with teammates and with newer teams finding their footing.' },
   ];
 </script>
 
 <svelte:head>
-  <title>About – Luminary Robotics FTC 36633</title>
-  <meta name="description" content="Learn about Luminary Robotics FTC Team 36633 - our history, mission, core values, and journey through competitive robotics." />
+  <title>About | Luminary Robotics FTC 36633</title>
+  <meta name="description" content="Learn about Luminary Robotics FTC Team 36633: our history, mission, core values, and journey through competitive robotics." />
 </svelte:head>
 
 <PageHero
   label="About Us"
   title="Who We Are"
-  subtitle="Luminary Robotics is FTC Team 36633 - a student-led robotics team competing at the highest level while investing in our community."
+  subtitle="Luminary Robotics is FTC Team 36633, a student-led robotics team competing at a high level while investing in our community."
 />
 
 <div class="container">
@@ -34,8 +50,8 @@
       <div class="about-text">
         <span class="section-header__label">Our Story</span>
         <h2 class="about-heading">The Dream Team Merger</h2>
-        <p class="about-p">This is Luminary's inaugural year, born from a visionary merger of the best talent from four esteemed teams: <strong>Hunga Munga</strong>, <strong>Slingshot</strong>, <strong>ChaiGPT</strong>, and <strong>Shooting Stars</strong>.</p>
-        <p class="about-p">After years of competing against each other and developing a deep respect for one another's engineering skills, we realized that our combined expertise could create something truly extraordinary. Luminary is a testament to the idea that competition eventually leads to collaboration.</p>
+        <p class="about-p">This is Luminary's first year. It came together when members from four teams, <strong>Hunga Munga</strong>, <strong>Slingshot</strong>, <strong>ChaiGPT</strong>, and <strong>Shooting Stars</strong>, decided to build as one.</p>
+        <p class="about-p">We spent years competing against each other and picked up a real respect for how each team worked. Joining forces let us pool what we each do best. Competition, it turns out, is a pretty good path to collaboration.</p>
       </div>
       <div class="merger-diagram reveal" aria-label="Merger of Hunga Munga, Slingshot, ChaiGPT, and Shooting Stars into Luminary">
         <div class="merger-teams">
@@ -81,12 +97,12 @@
     <div class="values-header reveal">
       <span class="section-header__label">Principles</span>
       <h2 class="section-header__title">Core Values</h2>
-      <p class="section-header__desc">[Core Values Placeholder] The principles that guide every decision we make as a team.</p>
+      <p class="section-header__desc">The principles that guide every decision we make as a team.</p>
     </div>
     <div class="values-grid">
       {#each values as val, i}
         <div class="value-card reveal" style="transition-delay:{i*80}ms">
-          <div class="value-card__icon" aria-hidden="true">{val.icon}</div>
+          <div class="value-card__icon" aria-hidden="true">{@html val.icon}</div>
           <h3 class="value-card__title">{val.title}</h3>
           <p class="value-card__desc">{val.desc}</p>
         </div>
@@ -243,10 +259,14 @@
   .value-card:hover { border-color: var(--border-2); }
 
   .value-card__icon {
-    font-size: 1.5rem;
     color: var(--accent-blue);
     margin-bottom: var(--space-4);
-    opacity: 0.8;
+    display: flex;
+  }
+
+  .value-card__icon :global(svg) {
+    width: 24px;
+    height: 24px;
   }
 
   .value-card__title {

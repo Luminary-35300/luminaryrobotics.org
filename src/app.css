@@ -1,12 +1,12 @@
 /* ============================================================
-   LUMINARY ROBOTICS – Global Design System
+   LUMINARY ROBOTICS - Global Design System
    FTC Team 36633
    ============================================================ */
 
 /* ── Fonts ─────────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Glacial Indifference – body font */
+/* Glacial Indifference - body font */
 @font-face {
   font-family: 'Glacial Indifference';
   src: url('/fonts/GlacialIndifference-Regular.otf') format('opentype');
@@ -22,7 +22,7 @@
   font-display: swap;
 }
 
-/* Against – heading font */
+/* Against - heading font */
 @font-face {
   font-family: 'Against';
   src: url('/fonts/against2.otf') format('opentype');
@@ -150,7 +150,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle star field texture – celestial but restrained */
+/* Subtle star field texture - celestial but restrained */
 body::before {
   content: '';
   position: fixed;
@@ -410,18 +410,13 @@ textarea.input {
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
 
-/* ── Scroll Reveal ─────────────────────────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px) scale(0.97);
-  transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), 
-              transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: opacity, transform;
-}
-
+/* ── Reveal hook (static) ──────────────────────────────────── */
+/* Scroll-reveal animation intentionally removed for a calm, static site.
+   Class retained so existing markup and the .visible state stay valid. */
+.reveal,
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: none;
 }
 
 /* ── Placeholder Boxes ─────────────────────────────────────── */
