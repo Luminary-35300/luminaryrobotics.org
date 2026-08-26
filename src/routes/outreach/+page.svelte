@@ -13,25 +13,25 @@
 <PageHero
   label="Community"
   title="Outreach Programs"
-  subtitle="Beyond the competition field, Luminary Robotics is committed to growing STEM education and inspiring future engineers in our community."
+  subtitle="What we do off the field: workshops, school visits, and free resources for new teams."
 />
 
 <!-- Hero image -->
 <section class="section--sm">
   <div class="container">
-    <MediaFrame src="/images/outreach/hero.jpg" alt="Luminary Robotics at a community outreach event" caption="Outreach" ratio="16 / 7" class="reveal" />
+    <MediaFrame src="/images/outreach/hero.jpg" alt="Luminary Robotics at a community outreach event" caption="Outreach" ratio="16 / 7" />
   </div>
 </section>
 
 <!-- Description -->
 <section class="section">
   <div class="container">
-    <div class="outreach-desc reveal">
+    <div class="outreach-desc">
       <div>
-        <span class="section-header__label">Our Approach</span>
-        <h2 class="outreach-heading">Building Tomorrow's Engineers</h2>
-        <p class="outreach-p">We want STEM to feel reachable. That shapes the programs we run and how we run them, from the youngest students to those already thinking about their own teams.</p>
-        <p class="outreach-p">Through hands-on workshops, school visits, and robot demos, we try to spark curiosity and help students pick up real skills, whatever their background.</p>
+        <span class="section-header__label">Outreach</span>
+        <h2 class="outreach-heading">What We Do</h2>
+        <p class="outreach-p">Most kids never get near a robot. We bring ours to them, and we answer questions from students who want to start a team of their own.</p>
+        <p class="outreach-p">That means workshops, school visits, and demos, run by students who were beginners themselves a couple of seasons ago.</p>
       </div>
       <MediaFrame src="/images/outreach/approach.jpg" alt="Students at a Luminary Robotics workshop" caption="Outreach" ratio="4 / 3" class="outreach-img" />
     </div>
@@ -43,15 +43,15 @@
 <!-- Events -->
 <section class="section">
   <div class="container">
-    <div class="events-header reveal">
+    <div class="events-header">
       <span class="section-header__label">Programs</span>
       <h2 class="section-header__title">Outreach Events</h2>
-      <p class="section-header__desc">Our first season's community programs and events.</p>
+      <p class="section-header__desc">Events from our first season.</p>
     </div>
-    <div class="events-note reveal">
+    <div class="events-note">
       <p class="events-note__text">
-        As a first-year team, we're scheduling our first workshops, school visits, and demos now.
-        Event recaps will land here as they happen. Want us at your school or event?
+        We're booking our first workshops and demos now. Recaps will show up here once they
+        happen. Want us at your school?
       </p>
       <a href="/contact" class="btn btn--outline btn--sm">Invite Luminary</a>
     </div>
@@ -63,13 +63,13 @@
 <!-- Gallery -->
 <section class="section">
   <div class="container">
-    <div class="gallery-header reveal">
+    <div class="gallery-header">
       <span class="section-header__label">Gallery</span>
       <h2 class="section-header__title">Event Photos</h2>
     </div>
     <div class="outreach-gallery">
-      {#each gallery as img, i}
-        <MediaFrame src={''} alt="Outreach photo" caption={img} ratio="1 / 1" class="reveal" />
+      {#each gallery as img}
+        <MediaFrame src="" alt="" caption={img} ratio="1 / 1" />
       {/each}
     </div>
   </div>
@@ -80,18 +80,17 @@
 <!-- FTC Blueprint & Resources -->
 <section class="section">
   <div class="container">
-    <div class="blueprint-header reveal">
+    <div class="blueprint-header">
       <span class="section-header__label">Resources</span>
-      <h2 class="section-header__title">FTC Blueprint, Free for Everyone</h2>
+      <h2 class="section-header__title">Free Resources</h2>
       <p class="section-header__desc">
-        One of our core outreach missions is making FTC accessible to any student who wants to compete,
-        regardless of experience or budget.
+        FTC is expensive and confusing to start. These are the things we wish we'd had.
       </p>
     </div>
 
     <div class="blueprint-grid">
       <!-- FTCBlueprint Card -->
-      <div class="blueprint-card reveal" style="transition-delay: 0ms">
+      <div class="blueprint-card">
         <div class="blueprint-card__icon blueprint-card__icon--blue" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
@@ -100,8 +99,8 @@
         <div>
           <h3 class="blueprint-card__title">FTCBlueprint</h3>
           <p class="blueprint-card__desc">
-            A free, comprehensive curriculum for learning FTC robotics programming from scratch, built by members of our founding teams.
-            Whether you're writing your first line of Java or optimizing autonomous routines, FTCBlueprint walks you through every step.
+            A free course on FTC programming, written by people on our team. It starts at your
+            first line of Java and goes through autonomous, vision, and odometry.
           </p>
           <ul class="blueprint-card__list">
             <li>Java & FTC SDK fundamentals</li>
@@ -117,7 +116,7 @@
       </div>
 
       <!-- Rookie Startup Card -->
-      <div class="blueprint-card reveal" style="transition-delay: 100ms">
+      <div class="blueprint-card">
         <div class="blueprint-card__icon blueprint-card__icon--gold" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -126,14 +125,14 @@
         <div>
           <h3 class="blueprint-card__title">Starting a Rookie Team</h3>
           <p class="blueprint-card__desc">
-            Luminary itself was born from a merger of experienced FTC members. We know exactly how overwhelming it can be to start fresh -
-            so we've put together guidance for new teams navigating their first season.
+            We're a rookie team ourselves, so this is fresh for us too. Here's what we wish
+            somebody had told us before season one.
           </p>
           <ul class="blueprint-card__list">
             <li>How to register with <em>FIRST</em></li>
             <li>Finding mentors & school sponsors</li>
             <li>Budget-friendly hardware starter kits</li>
-            <li>Building a team culture from day one</li>
+            <li>Splitting up work so nobody burns out</li>
             <li>Competition season calendar & prep</li>
           </ul>
           <a href="/contact" class="blueprint-card__link">
@@ -143,7 +142,7 @@
       </div>
 
       <!-- About FIRST Card -->
-      <div class="blueprint-card blueprint-card--wide reveal" style="transition-delay: 200ms">
+      <div class="blueprint-card blueprint-card--wide">
         <div class="blueprint-card__icon blueprint-card__icon--silver" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
@@ -329,7 +328,7 @@
 
   @media (max-width: 900px) {
     .outreach-desc { grid-template-columns: 1fr; }
-    .outreach-img { display: none; }
+    :global(.outreach-img) { display: none; }
     .blueprint-grid { grid-template-columns: 1fr; }
     .blueprint-card--wide { grid-column: 1; }
   }

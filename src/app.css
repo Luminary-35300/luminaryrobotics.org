@@ -101,7 +101,6 @@
   --btn-bg:      #ededf4;
   --btn-text:    #08080d;
   --btn-border:  #ededf4;
-  --star-opacity: 0.35;
 }
 
 /* ── Light Theme ──────────────────────────────────────────── */
@@ -123,7 +122,6 @@
   --btn-bg:      #0d0d16;
   --btn-text:    #f8f9fb;
   --btn-border:  #0d0d16;
-  --star-opacity: 0.06;
 }
 
 /* ── Reset & Base ─────────────────────────────────────────── */
@@ -148,31 +146,6 @@ body {
   min-height: 100vh;
   transition: background-color var(--transition-slow), color var(--transition-slow);
   overflow-x: hidden;
-}
-
-/* Subtle star field texture - celestial but restrained */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 72% 8%,  rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 38% 55%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 42%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 6%  80%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 54% 75%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 92% 62%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 28% 90%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 48% 30%, rgba(255,255,255,calc(var(--star-opacity)*0.7)) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 78% 88%, rgba(255,255,255,calc(var(--star-opacity)*0.7)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 63% 14%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 20% 65%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 95% 25%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 5%  45%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%),
-    radial-gradient(1px 1px at 42% 95%, rgba(255,255,255,var(--star-opacity)) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ── Typography ───────────────────────────────────────────── */
@@ -409,15 +382,6 @@ textarea.input {
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
-
-/* ── Reveal hook (static) ──────────────────────────────────── */
-/* Scroll-reveal animation intentionally removed for a calm, static site.
-   Class retained so existing markup and the .visible state stay valid. */
-.reveal,
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
 
 /* ── Placeholder Boxes ─────────────────────────────────────── */
 .placeholder {

@@ -7,20 +7,19 @@
     alt = '',
     caption = '',
     ratio = '16 / 10',
+    loading = 'lazy',
     class: className = '',
   } = $props();
 
   let failed = $state(false);
 </script>
 
-<figure class="media {className}" style="aspect-ratio: {ratio};">
+<figure class="media {className}" class:media--ph={!src || failed} style="aspect-ratio: {ratio};">
   {#if src && !failed}
-    <img {src} {alt} loading="lazy" onerror={() => (failed = true)} />
+    <img {src} {alt} {loading} onerror={() => (failed = true)} />
   {:else}
-    <div class="media__ph" role="img" aria-label={alt || caption || 'Image coming soon'}>
-      <img src="/logo-icon.png" alt="" aria-hidden="true" class="media__mark" />
-      {#if caption}<figcaption class="media__cap">{caption}</figcaption>{/if}
-    </div>
+    <img src="/logo-icon.png" alt="" aria-hidden="true" class="media__mark" />
+    {#if caption}<figcaption class="media__cap">{caption}</figcaption>{/if}
   {/if}
 </figure>
 
@@ -42,15 +41,13 @@
     display: block;
   }
 
-  .media__ph {
-    position: absolute;
-    inset: 0;
+  /* Placeholder state: a deliberate branded surface, not a dashed stub */
+  .media--ph {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--space-3);
-    /* Soft branded wash: reads as a deliberate surface, not a stub */
     background:
       radial-gradient(120% 80% at 50% 0%, var(--surface-3) 0%, transparent 60%),
       linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);

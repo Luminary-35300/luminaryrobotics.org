@@ -3,7 +3,6 @@
 
   let form = $state({ name: '', email: '', organization: '', message: '' });
   let submitted = $state(false);
-  let submitting = $state(false);
   let errors = $state({});
 
   function validate() {
@@ -20,16 +19,10 @@
     errors = validate();
     if (Object.keys(errors).length) return;
 
-    submitting = true;
-    
     const subject = encodeURIComponent(`Website Contact: ${form.name} from ${form.organization || 'No Organization'}`);
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nOrganization: ${form.organization || 'N/A'}\n\nMessage:\n${form.message}`);
     window.location.href = `mailto:luminaryrobotics@gmail.com?subject=${subject}&body=${body}`;
-    
-    setTimeout(() => {
-      submitting = false;
-      submitted = true;
-    }, 800);
+    submitted = true;
   }
 
   const contactInfo = [
@@ -45,12 +38,6 @@
       href: '#',
       icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>`,
     },
-    {
-      label: 'YouTube',
-      value: 'Luminary Robotics',
-      href: '#',
-      icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.5 6.5s-.2-1.5-.9-2.1c-.9-.9-1.8-.9-2.2-1C17 3.2 12 3.2 12 3.2s-5 0-7.4.2c-.5.1-1.4.1-2.2 1-.6.6-.9 2.1-.9 2.1S1.2 8.2 1.2 10v1.7c0 1.7.3 3.5.3 3.5s.2 1.5.9 2.1c.9.9 2 .8 2.5.9C6.5 18.4 12 18.4 12 18.4s5 0 7.4-.2c.5-.1 1.4-.1 2.2-1 .6-.6.9-2.1.9-2.1s.3-1.8.3-3.5v-1.7c-.1-1.8-.3-3.4-.3-3.4z" stroke="currentColor" stroke-width="1.5"/></svg>`,
-    },
   ];
 </script>
 
@@ -62,14 +49,14 @@
 <PageHero
   label="Get In Touch"
   title="Contact Us"
-  subtitle="Whether you're a potential sponsor, mentor, student, or community partner, we'd love to hear from you."
+  subtitle="Sponsors, mentors, students, and anyone with a question about the team."
 />
 
 <section class="section">
   <div class="container">
     <div class="contact-grid">
       <!-- Form -->
-      <div class="contact-form-wrap reveal">
+      <div class="contact-form-wrap">
         {#if submitted}
           <div class="form-success" role="alert">
             <div class="form-success__icon" aria-hidden="true">
@@ -78,8 +65,12 @@
                 <path d="M9 16l5 5 9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3 class="form-success__title">Message Sent</h3>
-            <p class="form-success__desc">Thank you for reaching out. A member of the Luminary Robotics team will get back to you shortly.</p>
+            <h3 class="form-success__title">Check Your Email App</h3>
+            <p class="form-success__desc">
+              Your email app should have opened with the message ready. Send it from there
+              and it will reach us. If nothing opened, email
+              <a href="mailto:luminaryrobotics@gmail.com">luminaryrobotics@gmail.com</a> directly.
+            </p>
           </div>
         {:else}
           <form class="contact-form" onsubmit={handleSubmit} novalidate id="contact-form">
@@ -132,27 +123,22 @@
                 id="contact-message"
                 class="input"
                 class:input--error={errors.message}
-                placeholder="Tell us how you'd like to connect, or ask us anything about the team..."
+                placeholder="What's on your mind?"
                 bind:value={form.message}
                 aria-required="true"
                 aria-describedby={errors.message ? 'message-error' : undefined}
               ></textarea>
               {#if errors.message}<p class="form-error" id="message-error" role="alert">{errors.message}</p>{/if}
             </div>
-            <button type="submit" class="btn btn--primary" disabled={submitting} id="contact-submit">
-              {#if submitting}
-                <span class="btn-spinner" aria-hidden="true"></span>
-                Sending…
-              {:else}
-                Send Message
-              {/if}
+            <button type="submit" class="btn btn--primary" id="contact-submit">
+              Open Email Draft
             </button>
           </form>
         {/if}
       </div>
 
       <!-- Info -->
-      <div class="contact-info reveal">
+      <div class="contact-info">
         <div class="contact-info__channels">
           <p class="contact-info__title">Contact Information</p>
           <div class="contact-channels">
@@ -170,13 +156,13 @@
 
         <div class="contact-info__cta">
           <h3 class="cta-heading">Interested in Sponsoring?</h3>
-          <p class="cta-desc">Luminary Robotics is actively seeking sponsors who share our commitment to STEM education and competitive excellence.</p>
+          <p class="cta-desc">We're looking for sponsors for our first season. The tiers page has what each level covers.</p>
           <a href="/sponsors" class="btn btn--outline btn--sm">View Sponsorship Tiers</a>
         </div>
 
         <div class="contact-info__cta">
           <h3 class="cta-heading">Are You a Student?</h3>
-          <p class="cta-desc">Interested in joining the team or learning more about how we operate? Reach out and we'll be happy to talk.</p>
+          <p class="cta-desc">Want to join, or just curious how the team runs? Send us a note.</p>
           <a href="/about" class="btn btn--outline btn--sm">Learn About the Team</a>
         </div>
       </div>
@@ -220,18 +206,6 @@
     margin: 0;
     line-height: 1.4;
   }
-
-  .btn-spinner {
-    width: 14px;
-    height: 14px;
-    border: 1.5px solid currentColor;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-    flex-shrink: 0;
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
 
   /* Success state */
   .form-success {

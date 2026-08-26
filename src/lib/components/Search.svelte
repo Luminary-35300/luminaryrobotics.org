@@ -8,12 +8,9 @@
   let selectedIdx = $state(0);
 
   const pages = [
-    { label: 'Home',           href: '/',         desc: 'Main landing page' },
-    { label: 'About',          href: '/about',     desc: 'Team history, mission, values, and timeline' },
-    { label: 'Meet The Team',  href: '/team',      desc: 'Roster, roles, and team member profiles' },
-    { label: 'Robot',          href: '/robot',     desc: 'Current season robot, specs, and systems' },
-    { label: 'Outreach',       href: '/outreach',  desc: 'Community programs, events, and impact' },
-    { label: 'Sponsors',       href: '/sponsors',  desc: 'Sponsorship tiers and partnership info' },
+    { label: 'Home',           href: '/',         desc: 'Home page' },
+    { label: 'About & Team',   href: '/about',     desc: 'How the team started, what we do, and who is on the roster' },
+    { label: 'Sponsors',       href: '/sponsors',  desc: 'Sponsorship levels and what they cover' },
     { label: 'Contact',        href: '/contact',   desc: 'Get in touch with the team' },
   ];
 
