@@ -2,7 +2,6 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { theme } from '$lib/stores/theme.js';
-  import { searchOpen } from '$lib/stores/search.js';
 
   let scrolled = $state(false);
   let mobileOpen = $state(false);
@@ -23,14 +22,7 @@
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     const handleKey = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        searchOpen.update(v => !v);
-      }
-      if (e.key === 'Escape') {
-        searchOpen.set(false);
-        mobileOpen = false;
-      }
+      if (e.key === 'Escape') mobileOpen = false;
     };
     window.addEventListener('keydown', handleKey);
 
@@ -78,22 +70,6 @@
 
     <!-- Actions -->
     <div class="nav__actions">
-      <button
-        class="nav__search-btn"
-        onclick={() => searchOpen.set(true)}
-        aria-label="Open search (Cmd+K)"
-        id="nav-search-btn"
-      >
-        <div class="nav__search-left">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span>Search</span>
-        </div>
-        <span class="nav__search-hint">⌘K</span>
-      </button>
-
       <button
         class="nav__theme-btn"
         onclick={() => theme.toggle()}
@@ -263,43 +239,6 @@
     flex-shrink: 0;
   }
 
-  /* Fixed height for search bar so theme btn can match */
-
-  .nav__search-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 12px 0 16px;
-    height: var(--nav-btn-h);
-    min-width: 160px;
-    font-size: var(--text-sm);
-    font-family: var(--font-body);
-    color: var(--text-3);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: all var(--transition);
-    white-space: nowrap;
-  }
-
-  .nav__search-btn:hover {
-    color: var(--text-2);
-    border-color: var(--border-2);
-  }
-
-  .nav__search-left {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
-
-  .nav__search-hint {
-    font-size: var(--text-xs);
-    color: var(--text-3);
-    letter-spacing: 0;
-  }
-
   .nav__theme-btn {
     display: flex;
     align-items: center;
@@ -378,11 +317,6 @@
 
   @media (max-width: 900px) {
     .nav__links { display: none; }
-    .nav__search-hint { display: none; }
     .nav__hamburger { display: flex; }
-  }
-
-  @media (max-width: 480px) {
-    .nav__search-btn { display: none; }
   }
 </style>

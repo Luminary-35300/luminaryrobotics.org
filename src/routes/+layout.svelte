@@ -2,7 +2,6 @@
   import '../app.css';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
-  import Search from '$lib/components/Search.svelte';
   import { onMount } from 'svelte';
   import { theme } from '$lib/stores/theme.js';
 
@@ -13,7 +12,6 @@
   });
 </script>
 
-<Search />
 <Nav />
 <main id="main-content">
   {@render children()}
