@@ -34,8 +34,8 @@
     },
     {
       label: 'Instagram',
-      value: '@luminaryrobotics',
-      href: '#',
+      value: '@luminary36633',
+      href: 'https://instagram.com/luminary36633',
       icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>`,
     },
   ];

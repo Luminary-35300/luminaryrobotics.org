@@ -20,7 +20,7 @@
         </div>
         <p class="footer__tagline">FTC Team 36633.<br>A rookie <em>FIRST</em> Tech Challenge team in Central Texas.</p>
         <div class="footer__socials">
-          <a href="https://instagram.com/luminaryrobotics" class="footer__social" aria-label="Instagram">
+          <a href="https://instagram.com/luminary36633" class="footer__social" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>

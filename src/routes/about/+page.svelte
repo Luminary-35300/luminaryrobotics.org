@@ -41,65 +41,6 @@
   subtitle="Luminary Robotics is FTC Team 36633, a student-led rookie team competing in Central Texas."
 />
 
-<div class="container">
-  <!-- ── Story ─────────────────────────────────────────────── -->
-  <section class="section" id="story">
-    <div class="story">
-      <div class="story__text">
-        <span class="section-header__label">Our Start</span>
-        <h2 class="story__heading">How Luminary Started</h2>
-        <p>
-          This is our first season. We started Luminary after competing with
-          <strong>Hunga Munga</strong>, <strong>Slingshot</strong>,
-          <strong>ChaiGPT</strong>, and <strong>Shooting Stars</strong>.
-        </p>
-        <p>
-          We spent years on opposite sides of the field and picked up a lot of respect for
-          how each of those teams worked. What we learned there shaped Luminary, and we're
-          glad to build on it.
-        </p>
-      </div>
-      <dl class="facts">
-        <div class="fact">
-          <dt>Team Number</dt>
-          <dd>FTC 36633</dd>
-        </div>
-        <div class="fact">
-          <dt>Season</dt>
-          <dd>Rookie year</dd>
-        </div>
-        <div class="fact">
-          <dt>Roster</dt>
-          <dd>10 students, 2 mentors</dd>
-        </div>
-        <div class="fact">
-          <dt>Program</dt>
-          <dd><em>FIRST</em> Tech Challenge</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ── Goals ─────────────────────────────────────────────── -->
-  <section class="section">
-    <div class="goals">
-      <span class="section-header__label">What We Do</span>
-      <h2 class="section-header__title">Our Goals</h2>
-      <p>
-        We want a robot that still works in the last match of the day, not just the first.
-        That means doing the engineering properly and writing it down as we go.
-      </p>
-      <p>
-        We also want to be useful to newer teams. We all learned FTC from somebody else,
-        so we answer questions when people ask.
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-</div>
 
 <!-- ── Team: circular layout (desktop) ─────────────────────── -->
 <section class="section team-circle-section" id="team">
@@ -172,7 +113,6 @@
 
   <div class="divider"></div>
 
-  <!-- ── Mentors ───────────────────────────────────────────── -->
   <section class="section" id="mentors">
     <div class="roster__header">
       <span class="section-header__label">Guidance</span>
@@ -182,6 +122,62 @@
       {#each mentors as mentor}
         <TeamCard name={mentor.name} role={mentor.role} bio={mentor.bio} />
       {/each}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section" id="story">
+    <div class="story">
+      <div class="story__text">
+        <span class="section-header__label">Our Start</span>
+        <h2 class="story__heading">How Luminary Started</h2>
+        <p>
+          This is our first season. We started Luminary after competing with
+          <strong>Hunga Munga</strong>, <strong>Slingshot</strong>,
+          <strong>ChaiGPT</strong>, and <strong>Shooting Stars</strong>.
+        </p>
+        <p>
+          We spent years on opposite sides of the field and picked up a lot of respect for
+          how each of those teams worked. What we learned there shaped Luminary, and we're
+          glad to build on it.
+        </p>
+      </div>
+      <dl class="facts">
+        <div class="fact">
+          <dt>Team Number</dt>
+          <dd>FTC 36633</dd>
+        </div>
+        <div class="fact">
+          <dt>Season</dt>
+          <dd>Rookie year</dd>
+        </div>
+        <div class="fact">
+          <dt>Roster</dt>
+          <dd>10 students, 2 mentors</dd>
+        </div>
+        <div class="fact">
+          <dt>Program</dt>
+          <dd><em>FIRST</em> Tech Challenge</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="goals">
+      <span class="section-header__label">What We Do</span>
+      <h2 class="section-header__title">Our Goals</h2>
+      <p>
+        We want a robot that still works in the last match of the day, not just the first.
+        That means doing the engineering properly and writing it down as we go.
+      </p>
+      <p>
+        We also want to be useful to newer teams. We all learned FTC from somebody else,
+        so we answer questions when people ask.
+      </p>
     </div>
   </section>
 </div>
